@@ -26,9 +26,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci --prefix /Reactify/ClientApp
-    - run: npm --prefix /Reactify/ClientApp run build --if-present
-    - run: npm --prefix /Reactify/ClientApp test
+    - run: npm ci --prefix ./Reactify/ClientApp
+    - run: npm --prefix ./Reactify/ClientApp run build --if-present
+    - run: npm --prefix ./Reactify/ClientApp test
     
     
   lint:
