@@ -7,10 +7,8 @@ import { Counter } from './components/Counter';
 
 import './custom.css'
 
-export default class App extends Component {
-  static displayName = App.name;
+function App(){
 
-  render () {
     return (
       <Layout>
         <Route exact path='/' component={Home} />
@@ -18,5 +16,6 @@ export default class App extends Component {
         <Route path='/fetch-data' component={FetchData} />
       </Layout>
     );
-  }
 }
+
+export default App;
