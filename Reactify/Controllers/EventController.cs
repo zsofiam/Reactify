@@ -41,7 +41,7 @@ namespace Reactify.Controllers
                 Id = index,
                 Title = Titles[rng.Next(Titles.Length)],
                 Band = Bands[rng.Next(Bands.Length)],
-                Date = DateTime.Now.AddDays(index),
+                Date = DateTime.Now.AddDays(index).ToString("dddd, dd MMMM yyyy"),
                 Venue = Venues[rng.Next(Venues.Length)]
             })
             .ToArray();
