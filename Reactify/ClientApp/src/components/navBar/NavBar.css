@@ -3,29 +3,29 @@
     background-color: #333;
 }
 
-    .topnav a {
-        float: left;
-        display: block;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-    }
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
 
-        .topnav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
 
-        .topnav a.active {
-            background-color: #04AA6D;
-            color: white;
-        }
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
 
-    .topnav .icon {
-        display: none;
-    }
+.topnav .icon {
+    display: none;
+}
 
 @media screen and (max-width: 600px) {
     .topnav a:not(:first-child) {

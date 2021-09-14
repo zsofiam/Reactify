@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from './components/Home';
 import MusicPlayer from './components/musicPlayer/MusicPlayer';
-import NavBar from './components/navBar/Navbar.js';
+import NavBar from './components/navBar/NavBar.js';
 
 import './custom.css'
 
