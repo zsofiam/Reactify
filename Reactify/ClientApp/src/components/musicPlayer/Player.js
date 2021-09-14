@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PlayerDetails from './PlayerDetails.js';
+import PlayerControls from './PlayerControls';
 
 const Player = (props) => {
 
@@ -8,6 +9,7 @@ const Player = (props) => {
             <audio></audio>
             <h4>Playing now</h4>
             <PlayerDetails song={props.song} />
+            <PlayerControls />
             <p><strong>Next up:</strong>{props.nextSong.title}by{props.nextSong.artist}</p>
         </div>
     );
