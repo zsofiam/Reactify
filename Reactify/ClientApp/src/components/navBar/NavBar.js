@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+import './Navbar.css';
 
 const NavBar = () => {
 
     return (
-        <div>
-            <p>Csak vmi</p>
-        </div>
+        <>
+            <div class="topnav" id="myTopnav">
+            </div>
+        </>
     );
 
 }
