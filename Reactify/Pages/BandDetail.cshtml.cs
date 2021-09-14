@@ -21,7 +21,7 @@ namespace Reactify.Pages
         }
         public void OnGet()
         {
-            SearchedBand = BandDetailService.GetBandDetails();
+            SearchedBand = BandDetailService.SearchedBand;
         }
     }
 }

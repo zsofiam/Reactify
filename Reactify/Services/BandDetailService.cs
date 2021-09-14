@@ -11,14 +11,13 @@ namespace Reactify.Services
     public class BandDetailService
     {
         public Band SearchedBand { get; private set; }
-        public Band GetBandDetails()
+
+        public BandDetailService()
         {
-            Band band = new Band();
-            band.Name = "BandName";
-            return band;
+            SearchedBand = new Band();
         }
 
-        public async Task<Band> FetchBandDetails(string searchedName)
+        public async void FetchBandDetails(string searchedName)
         {
             string url = "https://www.theaudiodb.com/api/v1/json/1/search.php?s=" + searchedName;
             using (var httpClient = new HttpClient())
@@ -38,7 +37,6 @@ namespace Reactify.Services
             //{
             //    return new Band();
             //}
-            return SearchedBand;
         }
     }
 }
