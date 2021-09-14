@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PlayerDetails from './PlayerDetails.js';
 
 const Player = (props) => {
 
@@ -6,10 +7,8 @@ const Player = (props) => {
         <div className="c-player">
             <audio></audio>
             <h4>Playing now</h4>
-            <p><strong>Next up:</strong>
-                {props.nextSong.title}
-                by
-                {props.nextSong.artist}</p>
+            <PlayerDetails song={props.song} />
+            <p><strong>Next up:</strong>{props.nextSong.title}by{props.nextSong.artist}</p>
         </div>
     );
 

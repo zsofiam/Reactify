@@ -15,6 +15,13 @@ const MusicPlayer = () => {
             artist: "Test artist2",
             img: "./images/dubstep.jpg",
             src: "./music/bensound-dubstep.mp3"
+        },
+
+        {
+            title: "Test title3",
+            artist: "Test artist3",
+            img: "./images/dubstep.jpg",
+            src: "./music/bensound-dubstep.mp3"
         }
     ]);
 
