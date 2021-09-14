@@ -1,0 +1,15 @@
+﻿@page
+@model Reactify.Pages.BandListModel
+@{
+    ViewData["Title"] = "Bands";
+}
+
+<div class="container">
+    <div class="band-search">
+        <p>Search</p>
+    </div>
+    <div class="band-details">
+        <p>Details</p>
+        <p>@Model.SearchedBand.Name</p>
+    </div>
+</div>
