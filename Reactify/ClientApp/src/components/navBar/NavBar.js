@@ -15,10 +15,10 @@ const NavBar = () => {
     return (
         <>
             <div class="topnav" id="myTopnav">
-                <a href="#home">Home</a>
-                <a href="#news">News</a>
-                <a href="#contact">Contact</a>
-                <a href="#about">About</a>
+                <a href="/">Ide mehet az ikonunk legyen az bármi</a>
+                <a href="elso">first</a>
+                <a href="masodik">second</a>
+                <a href="harmadik">third</a>
                 <a href="javascript:void(0);" class="icon" onClick={mobileMenu}>
                     <i class="fa fa-bars"></i>
                 </a>
