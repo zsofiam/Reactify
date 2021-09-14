@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 namespace Reactify.Controllers
 {
     [ApiController]
-    [Route("bands")]
+    [Route("band-detail")]
     public class BandDetailController : ControllerBase
     {
         public BandDetailService BandDetailService { get; set; }
+        public Band FetchedBand { get; private set; }
 
         public BandDetailController(BandDetailService bandDetailService)
         {
@@ -25,5 +26,12 @@ namespace Reactify.Controllers
             return BandDetailService.GetBandDetails();
         }
 
+        [HttpPost]
+        public IActionResult Post()
+        {
+            string searchedBandName = HttpContext.Request.Form["searched-band-name"];
+            FetchedBand = BandDetailService.FetchBandDetails(searchedBandName).Result;
+            return Redirect("band-detail");
+        }
     }
 }
