@@ -1,5 +1,6 @@
 import React, { Component, useState, useEffect } from 'react';
 import Player from './Player.js';
+import './MusicPlayer.css';
 
 const MusicPlayer = () => {
     const [songs, setSongs] = useState([
