@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-const Home = () => {
+const MusicPlayer = () => {
 
     return (
         <div>
-            <p>Csak vmi</p>
+            <p>Ez a lejátszó</p>
         </div>
     );
 
 }
 
-export default Home;
+export default MusicPlayer;
