@@ -6,16 +6,17 @@ import MusicPlayer from './components/musicPlayer/MusicPlayer';
 import './custom.css'
 
 function App() {
-
     return (
         <Router>
             <Switch>
                 <Route path="/" exact >
                     <Home />
                 </Route>
+
                 <Route path="/player" exact>
                     <MusicPlayer />
                 </Route>
+
             </Switch>
         </Router>
     );
