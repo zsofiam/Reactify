@@ -38,6 +38,7 @@
     position: relative;
     width: fit-content;
     margin: 0 auto;
+    width: auto;
 }
 
     .c-player--details .details-img img {
