@@ -2,7 +2,7 @@
     width: 100%;
     position: relative;
     height: auto;
-    background-color: grey;
+    background-color: #333;
 }
 
     .footer .col {
@@ -22,10 +22,13 @@
             font-size: 12px;
             line-height: 17px;
             padding: 20px 0px 5px 0px;
-            color: rgba(255,255,255,0.2);
             font-weight: normal;
             text-transform: uppercase;
             letter-spacing: 0.250em;
+            color: white;
+            font-size: 14px;
+            font-family: inherit;
+            font-weight: bold;
         }
 
         .footer .col ul {
