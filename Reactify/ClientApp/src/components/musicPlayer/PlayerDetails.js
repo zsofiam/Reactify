@@ -4,7 +4,7 @@ const PlayerDetails = (props) => {
 
     return (
         <div className="c-player--details">
-            <div className="detauls-img">
+            <div className="details-img">
                 <img src={props.song.img} alt="" />
             </div>
             <h3 className="details-title">{props.song.title}</h3>

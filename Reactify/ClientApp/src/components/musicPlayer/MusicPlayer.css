@@ -50,7 +50,7 @@
         box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.8), -6px -6px 12px rgba(255, 255, 255, 0.4);
     }
 
-    .c-player--details .details-img:after {
+/*    .c-player--details .details-img:after {
         content: '';
         display: block;
         position: absolute;
@@ -60,7 +60,7 @@
         bottom: -25px;
         border-radius: 50%;
         border: 3px dashed rgba(255, 206, 0, 1);
-    }
+    }*/
 
 .c-player--details .details-title {
     color: #EEE;
