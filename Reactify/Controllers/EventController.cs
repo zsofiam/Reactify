@@ -40,9 +40,9 @@ namespace Reactify.Controllers
             {
                 Id = index,
                 Title = Titles[rng.Next(Titles.Length)],
-                Band = Titles[rng.Next(Bands.Length)],
+                Band = Bands[rng.Next(Bands.Length)],
                 Date = DateTime.Now.AddDays(index),
-                Venue = Titles[rng.Next(Venues.Length)],
+                Venue = Venues[rng.Next(Venues.Length)]
             })
             .ToArray();
         }
