@@ -5,9 +5,9 @@ const Footer = () => {
 
     return (
         <>
-            <div class="footer">
-                <div class="contain">
-                    <div class="col">
+            <div className="footer">
+                <div className="contain">
+                    <div className="col">
                         <h1>Support</h1>
                         <ul>
                             <li>Contact us</li>
@@ -15,7 +15,7 @@ const Footer = () => {
                             <li>Open ticket</li>
                         </ul>
                     </div>
-                    <div class="col social">
+                    <div className="col social">
                         <h1>Social</h1>
                         <ul>
                             <li>
@@ -56,7 +56,7 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                    <div class="clearfix"></div>
+                    <div className="clearfix"/>
                 </div>
             </div>
         </>

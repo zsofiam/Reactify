@@ -16,6 +16,8 @@ const TrackList = () => {
             src: "./music/bensound-dubstep.mp3"
         }
     ]);
+
+    console.log("trying to create tracklist");
     
     return(
         <div className="container">
