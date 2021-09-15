@@ -33,7 +33,7 @@ namespace Reactify.Services
                 string apiResponse = await response.Content.ReadAsStringAsync();
                 var details = JObject.Parse(apiResponse)["artists"][0];
                 SearchedBand.Name = (string)details["strArtist"];
-                SearchedBand.Image = (string)details["strArtistLogo"];
+                SearchedBand.Image = (string)details["strArtistBanner"];
                 SearchedBand.Genre = (string)details["strGenre"];
                 SearchedBand.Country = (string)details["strCountry"];
                 SearchedBand.Website = (string)details["strWebsite"];

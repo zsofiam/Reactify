@@ -36,7 +36,7 @@ const BandDetail = () => {
     }
 
     return (
-        <div>
+        <div className="container">
             <input type="text" name="searched-band-name" id="search-band-field"/>
             <button className="search-band" onClick={handleSubmit}>Search</button>
 

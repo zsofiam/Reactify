@@ -23,7 +23,7 @@ const NavBar = () => {
                 </div>
                 
                 <a href="masodik">second</a>
-                <a href="harmadik">third</a>
+                <a href="/search-band">ArtistWiki</a>
                 <a href="javascript:void(0);" className="icon" onClick={mobileMenu}>
                     <i className="fa fa-bars"/>
                 </a>
