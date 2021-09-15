@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import './NavBar.css';
+import { useHistory } from 'react-router-dom';
 
 const NavBar = () => {
-
     const mobileMenu = () => {
         let x = document.getElementById("myTopnav");
         if (x.className === "topnav") {
@@ -12,15 +12,30 @@ const NavBar = () => {
         }
     };
 
+    const [track, setTrack] = useState("");
+    const history = useHistory();
+    const goToTracklist = () => history.push({
+        pathname: "/track",
+        state: { detail: track }
+    });
+
     return (
         <>
-            <div class="topnav" id="myTopnav">
-                <a href="/">Ide mehet az ikonunk legyen az b·rmi</a>
-                <a href="elso">first</a>
+            <div className="topnav" id="myTopnav">
+                <a href="/">Ide mehet az ikonunk legyen az b√°rmi</a>
+                <a href="elso">Whooof</a>
+                <div className="search-container">
+                    <input name="track"
+                        id="track" type="text"
+                        placeholder="Search.."
+                        onChange={(e) => { setTrack(e.target.value) }} />
+                    <button type="submit" onClick={goToTracklist}><i className="fa fa-search" /></button>
+                </div>
+
                 <a href="masodik">second</a>
                 <a href="harmadik">third</a>
-                <a href="javascript:void(0);" class="icon" onClick={mobileMenu}>
-                    <i class="fa fa-bars"></i>
+                <a href="javascript:void(0);" className="icon" onClick={mobileMenu}>
+                    <i className="fa fa-bars" />
                 </a>
             </div>
         </>

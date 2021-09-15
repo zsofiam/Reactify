@@ -1,0 +1,89 @@
+﻿.container {
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.1);
+}
+
+    .container .nav {
+        background-color: #fafafa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        margin: 0 -3rem 2rem;
+        box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        position: relative;
+    }
+
+        .container .nav:before,
+        .container .nav:after {
+            content: '';
+            height: 0;
+            width: 0;
+            position: absolute;
+            top: 0;
+            border: 0.75rem solid transparent;
+            border-bottom: 0.75rem solid #f2f0f0;
+            transform-origin: center;
+            box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            z-index: -1;
+        }
+
+        .container .nav:before {
+            left: 0;
+            transform: translateY(-0.45rem) rotate(135deg) translateX(-0.4rem);
+        }
+
+        .container .nav:after {
+            right: 0;
+            transform: translateY(-0.45rem) rotate(-135deg) translateX(0.4rem);
+        }
+
+        .container .nav a {
+            display: inline-block;
+            margin: 0 3rem;
+            font-size: 2rem;
+            color: #2980b9;
+            opacity: 0.7;
+            transition: 0.25s;
+        }
+
+            .container .nav a:hover {
+                opacity: 1;
+            }
+
+    .container .list .num {
+        padding: 0.5rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        transition: 0.25s;
+    }
+
+        .container .list .num h3 {
+            position: relative;
+            left: -1.5rem;
+            color: #3d3d3d;
+            font-size: 0.85rem;
+            transition: 0.25s;
+        }
+
+        .container .list .num:hover {
+            background-color: #fafafa;
+            cursor: pointer;
+        }
+
+            .container .list .num:hover:before {
+                opacity: 0.2;
+            }
+
+            .container .list .num:hover h3 {
+                left: 1rem;
+            }
+
+.message {
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 2rem;
+}

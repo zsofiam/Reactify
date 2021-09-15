@@ -7,6 +7,7 @@ import Footer from './components/footer/Footer.js';
 import EventsList from './components/EventsList';
 
 import './custom.css'
+import TrackList from "./components/trackList/TrackList";
 
 function App() {
     return (
@@ -23,6 +24,10 @@ function App() {
 
                 <Route path="/events" exact>
                     <EventsList />
+                </Route>
+
+                <Route path="/track" exact>
+                    <TrackList />
                 </Route>
 
             </Switch>
