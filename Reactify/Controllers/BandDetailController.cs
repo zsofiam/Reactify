@@ -26,10 +26,9 @@ namespace Reactify.Controllers
         }
 
         [HttpPost]
-        public void Post()
+        public void Post([FromBody] Input inputName)
         {
-            string searchedBandName = HttpContext.Request.Form["searched-band-name"];
-            BandDetailService.FetchBandDetails(searchedBandName);
+            BandDetailService.FetchBandDetails(inputName.InputName);
             Redirect("search-band");
         }
     }

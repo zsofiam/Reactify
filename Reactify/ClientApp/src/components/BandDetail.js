@@ -15,7 +15,7 @@ const BandDetail = () => {
 
     const handleSubmit = () => {
         const inputData = document.getElementById("search-band-field").value;
-        axios.post("band-detail", inputData)
+        axios.post("band-detail", { "InputName": inputData })
             .then(response => {
                 axios.get("band-detail")
                     .then(response => {
