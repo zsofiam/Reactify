@@ -13,6 +13,17 @@ code {
     border-color: #1861ac;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fira Sans", sans-serif;
+}
+
+body {
+    background-color: #DDD;
+}
+
 /*html, body {
     margin: 0;
     padding: 0;
