@@ -1,8 +1,11 @@
-import React, { Component, useState, useEffect } from 'react';
-import Player from './Player.js';
+import axios from "axios";
+import React, { useEffect, useState } from 'react';
 import './MusicPlayer.css';
+import Player from './Player.js';
+import { useLocation, useHistory } from "react-router-dom";
 
-const MusicPlayer = () => {
+const MusicPlayer = (detail) => {
+    /*const [songs, setSongs] = useState();*/
     const [songs] = useState([
         {
             title: "Test title",
@@ -28,6 +31,17 @@ const MusicPlayer = () => {
 
     const [currentSongIndex, setCurrentSongIndex] = useState(0);
     const [nextSongIndex, setNextSongIndex] = useState(currentSongIndex + 1);
+    const location = useLocation();
+
+    useEffect(() => {
+        axios
+            .get(`player?albumId=${location.state.detail}`)
+            .then(
+                res => {
+                    /*         setSongs(res.data)*/
+                    console.log(location.state.detail)
+                })
+    }, [])
 
 
     useEffect(() => {
