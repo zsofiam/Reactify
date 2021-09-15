@@ -18,7 +18,7 @@ const NavBar = () => {
                 <a href="/">Ide mehet az ikonunk legyen az b�rmi</a>
                 <a href="elso">Whooof</a>
                 <div className="search-container">
-                    <form action="/track" method="GET">
+                    <form action="/track" method="POST">
                         <input name="track" id="track" type="text" placeholder="Search.." />
                         <button type="submit"><i className="fa fa-search"/></button>
                     </form>
