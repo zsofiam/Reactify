@@ -22,8 +22,8 @@ const NavBar = () => {
     return (
         <>
             <div className="topnav" id="myTopnav">
-                <a href="/">Ide mehet az ikonunk legyen az bármi</a>
-                <a href="elso">Whooof</a>
+                <a href="/"><i class="fab fa-spotify"></i></a>
+                <a href="elso">Search Bands</a>
                 <div className="search-container">
                     <input name="track"
                         id="track" type="text"
@@ -32,8 +32,9 @@ const NavBar = () => {
                     <button type="submit" onClick={goToTracklist}><i className="fa fa-search" /></button>
                 </div>
 
-                <a href="masodik">second</a>
-                <a href="harmadik">third</a>
+                <a href="masodik">Search Events</a>
+
+
                 <a href="javascript:void(0);" className="icon" onClick={mobileMenu}>
                     <i className="fa fa-bars" />
                 </a>
