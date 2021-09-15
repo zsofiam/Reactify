@@ -4,6 +4,7 @@ import Home from './components/Home';
 import MusicPlayer from './components/musicPlayer/MusicPlayer';
 
 import './custom.css'
+import TrackList from "./components/trackList/TrackList";
 
 function App() {
     return (
@@ -15,6 +16,10 @@ function App() {
 
                 <Route path="/player" exact>
                     <MusicPlayer />
+                </Route>
+
+                <Route path="/tracklist" exact>
+                    <TrackList />
                 </Route>
 
             </Switch>
