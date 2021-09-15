@@ -3,6 +3,11 @@ using Microsoft.Extensions.Logging;
 using Reactify.Models;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Text.Json;
+using System.Threading.Tasks;
+using Newtonsoft.Json.Linq;
 
 namespace Reactify.Controllers
 {
@@ -19,18 +24,24 @@ namespace Reactify.Controllers
 
 
         // get search result tracks
-        [HttpPost]
-        public IEnumerable<Track> GetResultTracks([FromForm] string track)
+        [HttpGet]
+        public async Task<IEnumerable<Track>> GetResultTracks([FromForm] string track)  // it was type IEnumerable<Track> void or Task type?
         {
-            return Enumerable.Range(1, 5).Select(index => new Track
+            // get all track based on incoming track search
+            
+            string url = "https://api.deezer.com/search?q=track:" + track.Trim().Replace(" ", "_");
+            using (var httpClient = new HttpClient())
             {
-                Id = "1",
-                Duration = "60",
-                ReleaseDate = track,
-                Title = "Fake Title",
-                Preview = "https://cdns-preview-d.dzcdn.net/stream/c-deda7fa9316d9e9e880d2c6207e92260-8.mp3"
-            })
-            .ToArray();
+                httpClient.DefaultRequestHeaders.Add("User-Agent", "Anything");
+                httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                var response = httpClient.GetAsync(url).Result;
+                response.EnsureSuccessStatusCode();
+                string apiResponse = await response.Content.ReadAsStringAsync();
+                IEnumerable<Track> details = JObject.Parse(apiResponse) as IEnumerable<Track>;
+                return details;
+            }
+            
         }
 
         //get specific track
