@@ -1,34 +1,46 @@
-﻿import React, {useState} from 'react';
+﻿import axios from "axios";
+import React, { useEffect, useState } from 'react';
+import { useLocation } from "react-router-dom";
 
-const TrackList = () => {
-    const [songs, setSongs] = useState([
-        {
-            title: "Test title",
-            artist: "Test artist",
-            img: "./images/dubstep.jpg",
-            src: "./music/bensound-dubstep.mp3"
-        },
+const TrackList = (detail) => {
+    const [songs, setSongs] = useState();
+    const location = useLocation();
+    const [isResultAvailable, setResultAvailable] = useState(false);
 
-        {
-            title: "Test title2",
-            artist: "Test artist2",
-            img: "./images/dubstep.jpg",
-            src: "./music/bensound-dubstep.mp3"
-        }
-    ]);
 
-    console.log("trying to create tracklist");
-    
-    return(
+    useEffect(() => {
+        axios
+            .get(`track?track=${location.state.detail}`)
+            .then(
+                res => {
+                    console.log(res);
+                    setSongs({
+                        id: res.data.id,
+                        title: res.data.title,
+                        duration: res.data.duration,
+                        releaseDate: res.data.releaseDate,
+                        preview: res.data.preview,
+                    })
+                    setResultAvailable(true);
+                })
+        console.log(songs);
+    }, [])
+
+    return (
         <div className="container">
-            <ul>
-                {songs.map(song => (
-                    <li><h3> <img src={song.img}  alt="bob"/> {song.artist} {song.title} </h3></li>
-                    )
-                )}
-            </ul>
+
+            {isResultAvailable ?
+                <ul>
+
+                    <li>
+                        <h3> {songs.title} </h3>
+                    </li>
+
+                </ul>
+                : <></>
+            }
         </div>
-    ) 
+    )
 }
 
 export default TrackList;
