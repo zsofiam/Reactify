@@ -28,7 +28,10 @@ namespace Reactify.Controllers
         [HttpPost]
         public void Post([FromBody] Input inputName)
         {
-            BandDetailService.FetchBandDetails(inputName.InputName);
+            if (inputName.InputName != "")
+            {
+                BandDetailService.FetchBandDetails(inputName.InputName);
+            }
             Redirect("search-band");
         }
     }

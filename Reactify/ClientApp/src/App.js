@@ -4,7 +4,7 @@ import Home from './components/Home';
 import MusicPlayer from './components/musicPlayer/MusicPlayer';
 import NavBar from './components/navBar/NavBar.js';
 import Footer from './components/footer/Footer.js';
-import BandDetail from './components/BandDetail';
+import BandDetail from './components/bandDetail/BandDetail';
 
 import './custom.css'
 import TrackList from "./components/trackList/TrackList";
