@@ -25,7 +25,7 @@ function App() {
                     <BandDetail />
                 </Route>
 
-                <Route path="/tracklist" exact>
+                <Route path="/track" exact>
                     <TrackList />
                 </Route>
 
