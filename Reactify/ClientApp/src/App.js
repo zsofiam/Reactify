@@ -6,6 +6,7 @@ import NavBar from './components/navBar/NavBar.js';
 import Footer from './components/footer/Footer.js';
 
 import './custom.css'
+import TrackList from "./components/trackList/TrackList";
 
 function App() {
     return (
@@ -18,6 +19,10 @@ function App() {
 
                 <Route path="/player" exact>
                     <MusicPlayer />
+                </Route>
+
+                <Route path="/tracklist" exact>
+                    <TrackList />
                 </Route>
 
             </Switch>
