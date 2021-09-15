@@ -1,5 +1,5 @@
 ﻿import React, { useState } from 'react';
-import axios from 'axios';
+import axios from 'axios'; 
 
 import Band from './Band.js';
 
@@ -34,25 +34,6 @@ const BandDetail = () => {
 
 
     }
-
-    //const handleSubmit = () => {
-    //    console.log("fetch");
-    //    axios.get('band-detail')
-    //        .then((response) => {
-    //            const bandDetails = response.data;
-    //            console.log(bandDetails);
-    //            setSearchedBand({
-    //                "name": bandDetails.name,
-    //                "image": bandDetails.image,
-    //                "genre": bandDetails.genre,
-    //                "country": bandDetails.country,
-    //                "website": bandDetails.website,
-    //                "biography": bandDetails.biography
-    //            })
-    //        })
-        
-        
-    //}
 
     return (
         <div>
