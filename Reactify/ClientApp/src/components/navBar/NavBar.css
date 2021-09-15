@@ -59,13 +59,15 @@
         }
 }
 
-.topnav input[type=text] {
+.topnav .search-container {
     float: right;
+}
+
+.topnav input[type=text] {
     padding: 6px;
-    border: none;
     margin-top: 8px;
-    margin-right: 16px;
     font-size: 17px;
+    border: none;
 }
 
 .topnav .search-container button {
@@ -98,7 +100,4 @@
     .topnav input[type=text] {
         border: 1px solid #ccc;
     }
-}
-.topnav .search-container {
-    float: right;
 }

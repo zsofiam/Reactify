@@ -18,8 +18,10 @@ const NavBar = () => {
                 <a href="/">Ide mehet az ikonunk legyen az b�rmi</a>
                 <a href="elso">Whooof</a>
                 <div className="search-container">
-                    <input type="text" placeholder="Search.." />
-                    <button type="submit"><i className="fa fa-search"/></button>
+                    <form action="/track" method="GET">
+                        <input name="track" id="track" type="text" placeholder="Search.." />
+                        <button type="submit"><i className="fa fa-search"/></button>
+                    </form>
                 </div>
                 
                 <a href="masodik">second</a>
