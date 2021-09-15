@@ -22,7 +22,7 @@ const NavBar = () => {
     return (
         <>
             <div className="topnav" id="myTopnav">
-                <a href="/"><i class="fab fa-spotify"></i></a>
+                <a href="/" className="icon-spotify"><i class="fab fa-spotify"></i></a>
                 <a href="elso">Search Bands</a>
                 <div className="search-container">
                     <input name="track"

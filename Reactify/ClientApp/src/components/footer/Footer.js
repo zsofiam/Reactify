@@ -11,8 +11,6 @@ const Footer = () => {
                         <h1>Support</h1>
                         <ul>
                             <li>Contact us</li>
-                            <li>Web chat</li>
-                            <li>Open ticket</li>
                         </ul>
                     </div>
                     <div className="col social">
@@ -20,7 +18,6 @@ const Footer = () => {
                         <ul>
                             <li>
                                 <a href="https://www.facebook.com/"
-                                    target='_blank'
                                     aria-label='Facebook'
                                     rel="noreferrer"
                                 >
