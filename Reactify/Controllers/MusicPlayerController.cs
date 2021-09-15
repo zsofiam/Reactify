@@ -17,8 +17,25 @@ namespace Reactify.Controllers
             _logger = logger;
         }
 
-        [HttpGet]
-        public IEnumerable<Track> Get()
+
+        // get search result tracks
+        [HttpGet("{search}")]
+        public IEnumerable<Track> GetResultTracks()
+        {
+            return Enumerable.Range(1, 5).Select(index => new Track
+            {
+                Id = "1",
+                Duration = "60",
+                ReleaseDate = "tegnap",
+                Title = "Fake Title",
+                Preview = "https://cdns-preview-d.dzcdn.net/stream/c-deda7fa9316d9e9e880d2c6207e92260-8.mp3"
+            })
+            .ToArray();
+        }
+
+        //get specific track
+        [HttpGet("{id}")]
+        public IEnumerable<Track> GetTrack()
         {
             return Enumerable.Range(1, 5).Select(index => new Track
             {
