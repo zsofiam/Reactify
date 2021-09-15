@@ -1,14 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json.Linq;
 using Reactify.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Text.Json;
 using System.Threading.Tasks;
-using Newtonsoft.Json.Linq;
-using System;
 
 namespace Reactify.Controllers
 {
@@ -29,6 +27,8 @@ namespace Reactify.Controllers
         public async Task<List<Track>> GetResultTracks([FromQuery] string track)  // it was type IEnumerable<Track> void or Task type?
         {
             // get all track based on incoming track search
+
+            if (track is null || track == "") track = "christmas";
 
             string url = "https://api.deezer.com/search?q=track:" + track.Trim().Replace(" ", "_");
             using (var httpClient = new HttpClient())

@@ -1,6 +1,9 @@
 ﻿import axios from "axios";
 import React, { useEffect, useState } from 'react';
-import { useLocation } from "react-router-dom";
+import { useLocation, useHistory } from "react-router-dom";
+import './TrackList.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlay, faPause, faForward, faBackward } from '@fortawesome/free-solid-svg-icons'
 
 const TrackList = (detail) => {
     const [songs, setSongs] = useState();
@@ -13,33 +16,40 @@ const TrackList = (detail) => {
             .get(`track?track=${location.state.detail}`)
             .then(
                 res => {
-                    console.log(res);
-                    setSongs({
-                        id: res.data.id,
-                        title: res.data.title,
-                        duration: res.data.duration,
-                        releaseDate: res.data.releaseDate,
-                        preview: res.data.preview,
-                    })
+                    setSongs(res.data)
                     setResultAvailable(true);
                 })
         console.log(songs);
     }, [])
 
+
+    const history = useHistory();
+    const goToPlayer = () => history.push({
+        pathname: "/player",
+        state: { detail: document.getElementById("song").id }
+    });
+
+
     return (
+
         <div className="container">
-
             {isResultAvailable ?
-                <ul>
+                <ul className="list">
 
-                    <li>
-                        <h3> {songs.title} </h3>
-                    </li>
+                    {songs.map(song => (
+
+                        <li className="num" onClick={goToPlayer} data-id={song.id} id="song">
+                            <h3><img src={song.album.cover} alt="" /></h3>
+                            <h3> <strong> {song.title}</strong></h3>
+                            <h3>{song.artist.name}</h3>
+                        </li>
+                    )
+                    )}
 
                 </ul>
                 : <></>
             }
-        </div>
+        </div >
     )
 }
 
