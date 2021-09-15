@@ -25,6 +25,7 @@
     <Folder Include="ClientApp\src\Pages\" />
     <Folder Include="ClientApp\src\__test__\" />
     <Folder Include="Services\" />
+    <Folder Include="Services\" />
 
   </ItemGroup>
 

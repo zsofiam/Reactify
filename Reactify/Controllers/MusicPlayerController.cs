@@ -7,7 +7,7 @@ using System.Linq;
 namespace Reactify.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("track")]
     public class MusicPlayerController : ControllerBase
     {
         private readonly ILogger<WeatherForecastController> _logger;
