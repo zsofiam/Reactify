@@ -4,6 +4,7 @@ import Home from './components/Home';
 import MusicPlayer from './components/musicPlayer/MusicPlayer';
 import NavBar from './components/navBar/NavBar.js';
 import Footer from './components/footer/Footer.js';
+import EventsList from './components/EventsList';
 
 import './custom.css'
 
@@ -18,6 +19,10 @@ function App() {
 
                 <Route path="/player" exact>
                     <MusicPlayer />
+                </Route>
+
+                <Route path="/events" exact>
+                    <EventsList />
                 </Route>
 
             </Switch>

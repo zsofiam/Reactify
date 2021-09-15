@@ -1,7 +1,7 @@
 ﻿import React, { Component, useState, useEffect } from "react";
 import axios from "axios";
 
-const EventsList = (props) => {
+const EventsList = () => {
 
     const [events, setEvents] = useState([]);
 
