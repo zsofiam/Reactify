@@ -14,11 +14,13 @@ const EventsList = () => {
     }, []);
 
     return (
+        <>
         <table className='table table-striped' aria-labelledby="tabelLabel">
                 <thead>
                     <tr>
-                        <th>title</th>
+                        <th></th>
                         <th>band</th>
+                        <th>genre</th>
                         <th>date</th>
                         <th>venue</th>
                     </tr>
@@ -26,14 +28,18 @@ const EventsList = () => {
                 <tbody>
                     {events.map(event =>
                         <tr key={event.id}>
-                            <td>{event.title}</td>
+                            <td></td>
                             <td>{event.band}</td>
+                            <td>{event.genre}</td>
                             <td>{event.date}</td>
                             <td>{event.venue}</td>
                         </tr>
                     )}
-                </tbody>
+            </tbody>
             </table>
+
+
+            </>
     );
 
 }
