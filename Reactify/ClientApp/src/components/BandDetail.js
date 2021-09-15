@@ -13,32 +13,52 @@ const BandDetail = () => {
         "biography": "Linkin Park is an American rock band from Agoura Hills, California, formed in 1996.",
     });
 
-
     const handleSubmit = () => {
-        console.log("fetch");
-        axios.get('band-detail')
-            .then((response) => {
-                const bandDetails = response.data;
-                console.log(bandDetails);
-                setSearchedBand({
-                    "name": bandDetails.name,
-                    "image": bandDetails.image,
-                    "genre": bandDetails.genre,
-                    "country": bandDetails.country,
-                    "website": bandDetails.website,
-                    "biography": bandDetails.biography
-                })
-            })
-        
-        
+        const inputData = document.getElementById("search-band-field").value;
+        axios.post("band-detail", inputData)
+            .then(response => {
+                axios.get("band-detail")
+                    .then(response => {
+                        const bandDetails = response.data;
+                        console.log(bandDetails);
+                        setSearchedBand({
+                            "name": bandDetails.name,
+                            "image": bandDetails.image,
+                            "genre": bandDetails.genre,
+                            "country": bandDetails.country,
+                            "website": bandDetails.website,
+                            "biography": bandDetails.biography
+                        });
+                    });
+            });
+
+
     }
+
+    //const handleSubmit = () => {
+    //    console.log("fetch");
+    //    axios.get('band-detail')
+    //        .then((response) => {
+    //            const bandDetails = response.data;
+    //            console.log(bandDetails);
+    //            setSearchedBand({
+    //                "name": bandDetails.name,
+    //                "image": bandDetails.image,
+    //                "genre": bandDetails.genre,
+    //                "country": bandDetails.country,
+    //                "website": bandDetails.website,
+    //                "biography": bandDetails.biography
+    //            })
+    //        })
+        
+        
+    //}
 
     return (
         <div>
-            <form action="/band-detail" method="post" onSubmit={handleSubmit}>
-                <input type="text" name="searched-band-name" />
-                <input type="submit" className="search-band" value="Search" />
-            </form>
+            <input type="text" name="searched-band-name" id="search-band-field"/>
+            <button className="search-band" onClick={handleSubmit}>Search</button>
+
             <Band bandData={searchedBand} />
         </div>
     )

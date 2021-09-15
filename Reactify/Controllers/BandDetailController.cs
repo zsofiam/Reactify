@@ -30,7 +30,7 @@ namespace Reactify.Controllers
         {
             string searchedBandName = HttpContext.Request.Form["searched-band-name"];
             BandDetailService.FetchBandDetails(searchedBandName);
-            Redirect("band-detail");
+            Redirect("search-band");
         }
     }
 }
