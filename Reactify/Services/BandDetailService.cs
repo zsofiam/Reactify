@@ -1,4 +1,5 @@
-﻿using Reactify.Models;
+﻿using Newtonsoft.Json.Linq;
+using Reactify.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +31,13 @@ namespace Reactify.Services
                 var response = httpClient.GetAsync(url).Result;
                 response.EnsureSuccessStatusCode();
                 string apiResponse = await response.Content.ReadAsStringAsync();
-                SearchedBand = JsonSerializer.Deserialize<Band>(apiResponse);
+                var details = JObject.Parse(apiResponse)["artists"][0];
+                SearchedBand.Name = (string)details["strArtist"];
+                SearchedBand.Image = (string)details["strArtistLogo"];
+                SearchedBand.Genre = (string)details["strGenre"];
+                SearchedBand.Country = (string)details["strCountry"];
+                SearchedBand.Website = (string)details["strWebsite"];
+                SearchedBand.Biography = (string)details["strBiographyEN"];
             }
         }
     }

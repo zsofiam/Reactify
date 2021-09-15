@@ -23,7 +23,7 @@ namespace Reactify
         {
 
             services.AddControllersWithViews();
-            services.AddTransient<BandDetailService>();
+            services.AddSingleton<BandDetailService>();
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
