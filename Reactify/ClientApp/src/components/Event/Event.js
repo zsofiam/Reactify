@@ -8,7 +8,12 @@ const Event = (props) => {
         <tr key={id}>
             <td><img src={img} /> </td>
             <td>{band}</td>
-            <td>{genre}</td>
+            <td>
+            {genre.map((genreItem, i) => [
+                i > 0 && ", ",
+                <span key={i}>{genreItem}</span>
+            ])}
+            </td>
             <td>{date}</td>
             <td>{venue}</td>
             <td><a href={url} target="_blank" >Buy Ticket</a></td>
