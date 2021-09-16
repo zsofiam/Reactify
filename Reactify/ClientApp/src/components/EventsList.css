@@ -1,0 +1,16 @@
+﻿img{
+    width: 20%;
+}
+th, td{
+    text-align: center;
+}
+.events-container{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    justify-items:center;
+}
+.events-container table{
+    
+    justify-self:center;
+}
