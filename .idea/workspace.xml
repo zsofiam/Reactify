@@ -6,6 +6,7 @@
       <change beforePath="$PROJECT_DIR$/Reactify/ClientApp/src/components/Event/Event.js" beforeDir="false" afterPath="$PROJECT_DIR$/Reactify/ClientApp/src/components/Event/Event.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reactify/ClientApp/src/components/Event/EventsList.css" beforeDir="false" afterPath="$PROJECT_DIR$/Reactify/ClientApp/src/components/Event/EventsList.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reactify/ClientApp/src/components/Event/EventsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/Reactify/ClientApp/src/components/Event/EventsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reactify/Reactify.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Reactify/Reactify.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +73,7 @@
       <workItem from="1631698383289" duration="1311000" />
       <workItem from="1631699773746" duration="828000" />
       <workItem from="1631802744340" duration="293000" />
-      <workItem from="1631811197086" duration="6547000" />
+      <workItem from="1631811197086" duration="7329000" />
     </task>
     <servers />
   </component>

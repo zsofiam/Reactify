@@ -1,7 +1,6 @@
 ﻿
 .card {
-    --card-gradient: rgba(0, 0, 0, 0.8);
-    --card-gradient: #5e9ad9, #e271ad;
+    --card-gradient:rgba(0, 0, 0, 0.9), #e271ad;
     --card-blend-mode: overlay;
     background-color: #fff;
     border-radius: 0.5rem;
@@ -27,7 +26,7 @@
     margin-bottom: 0;
 }
 .card:hover, .card:focus-within {
-    --card-gradient: #24a9d5 max(8.5rem, 20vh);
+    --card-gradient: rebeccapurple max(9.0rem, 20vh);
 }
 
 .events-div {
@@ -40,7 +39,8 @@
     line-height: 1.5;
     font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
     color: #444;
-    background-color: #e1faf1;
+    background-image: url("https://cdn.pixabay.com/photo/2016/11/22/19/15/hand-1850120_960_720.jpg");
+
 }
 
 .card h3 {
@@ -68,7 +68,7 @@
 .events-button {
     display: inline-block;
     border-radius: 4px;
-    background-image: linear-gradient(to right, white 0%, #24a9d5 95%);
+    background-image: linear-gradient(to right, white 0%, rebeccapurple 95%);
     border: none;
     color: black;
     text-align: center;
