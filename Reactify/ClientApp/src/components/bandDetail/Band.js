@@ -7,7 +7,7 @@ const Band = (props) => {
         <>
             {props.bandData.name !== '' ?
             <div className="band-details">
-                <div classname="band-banner">
+                <div className="band-banner">
                     <img src={props.bandData.image} alt="picture about the band logo" />
                 </div>
                 <p className="band-info"><strong>Genre:</strong> {props.bandData.genre}</p>
@@ -17,7 +17,7 @@ const Band = (props) => {
             </div >
             :
             <div className="band-empty">
-                <p>Search for the name of an artist to see the result</p>
+                <p id="noresult">Search for the name of an artist to see the result</p>
             </div>
             }
         </>
