@@ -7,12 +7,12 @@ const Home = () => {
         <>
             <div className="background-container" data-testid="background-video">
                 <video autoPlay loop muted>
-                    <source src="./video/home.mp4" type="video/mp4"/>
+                    <source src="./video/home.mp4" type="video/mp4" />
                 </video>
             </div>
 
             <div className='container-button'>
-                <button className='one'>Play some <b>amazing</b> music!</button>
+                <button data-testid="play-music-button" className='one'>Play some <b>amazing</b> music!</button>
             </div>
         </>
     );

@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="961dd2de-8947-46cd-88ba-3c1cea4ebc6d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Reactify/ClientApp/src/components/trackList/TrackList.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reactify/ClientApp/src/components/trackList/TrackList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reactify/ClientApp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Reactify/ClientApp/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reactify/ClientApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Reactify/ClientApp/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reactify/ClientApp/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/Reactify/ClientApp/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +52,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -73,6 +68,7 @@
       <workItem from="1631698244957" duration="123000" />
       <workItem from="1631698383289" duration="1311000" />
       <workItem from="1631699773746" duration="828000" />
+      <workItem from="1631802744340" duration="293000" />
     </task>
     <servers />
   </component>
