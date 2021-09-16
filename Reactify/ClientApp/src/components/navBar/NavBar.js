@@ -23,7 +23,9 @@ const NavBar = () => {
         <>
             <div className="topnav" id="myTopnav">
                 <a href="/" className="icon-spotify"><i class="fab fa-spotify"></i></a>
-                <a href="elso">Search Bands</a>
+
+                <a href="/search-band">Search Artists</a>
+
                 <div className="search-container">
                     <input name="track"
                         id="track" type="text"
@@ -32,9 +34,7 @@ const NavBar = () => {
                     <button type="submit" onClick={goToTracklist}><i className="fa fa-search" /></button>
                 </div>
 
-
                 <a href="masodik">Search Events</a>
-                <a href="/search-band">ArtistWiki</a>
 
                 <a href="javascript:void(0);" className="icon" onClick={mobileMenu}>
                     <i className="fa fa-bars" />
