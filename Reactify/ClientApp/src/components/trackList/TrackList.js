@@ -18,9 +18,7 @@ const TrackList = (props) => {
                     setResultAvailable(true);
                     console.log(res.data);
                 })
-    }, [props.match.params.track]) //
-
-    //"302127"
+    }, [props.match.params.track])
 
     const history = useHistory();
     const goToPlayer = () => history.push({

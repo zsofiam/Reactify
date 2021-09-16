@@ -125,8 +125,10 @@ body {
 
 .one {
     box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset, 0px 0px 10px 0px #782CDA;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#782CDA), to(rgba(126, 94, 162, 0.51))), url("https://www.sheerid.com/shoppers/wp-content/uploads/sites/4/2020/05/spotify-deal-page-467x316.jpg");
-    background-image: linear-gradient(to bottom, #782CDA, rgba(126, 94, 162, 0.51)), url("https://www.sheerid.com/shoppers/wp-content/uploads/sites/4/2020/05/spotify-deal-page-467x316.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#782CDA), 
+    to(rgba(126, 94, 162, 0.51))), url("https://www.sheerid.com/shoppers/wp-content/uploads/sites/4/2020/05/spotify-deal-page-467x316.jpg");
+    background-image: linear-gradient(to bottom, #782CDA, rgba(126, 94, 162, 0.51)), 
+        url("https://www.sheerid.com/shoppers/wp-content/uploads/sites/4/2020/05/spotify-deal-page-467x316.jpg");
 }
 
 .one:hover {

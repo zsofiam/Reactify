@@ -32,7 +32,6 @@ namespace Reactify.Controllers
 
             using (var httpClient = new HttpClient())
             {
-                try { } catch { }
                 httpClient.DefaultRequestHeaders.Add("User-Agent", "Anything");
                 httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
