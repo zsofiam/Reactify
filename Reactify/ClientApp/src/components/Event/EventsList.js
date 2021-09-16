@@ -1,4 +1,4 @@
-﻿import React, {Component, useState, useEffect} from "react";
+﻿import React, {useEffect, useState} from "react";
 import axios from "axios";
 import './EventsList.css';
 import Event from './Event.js';

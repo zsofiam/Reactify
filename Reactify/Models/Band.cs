@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
-
-namespace Reactify.Models
+﻿namespace Reactify.Models
 {
     public class Band
     {
@@ -19,6 +13,5 @@ namespace Reactify.Models
         public string Website { get; set; }
 
         public string Biography { get; set; }
-
     }
 }

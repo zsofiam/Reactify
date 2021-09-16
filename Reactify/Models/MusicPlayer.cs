@@ -1,5 +1,3 @@
-using System;
-
 namespace Reactify
 {
     public class MusicPlayer

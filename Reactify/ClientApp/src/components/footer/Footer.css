@@ -6,52 +6,53 @@
     transition-duration: 0.300s;
 }
 
-    .footer:hover {
-        height: 100px;
-    }
-    .footer .col {
-        width: 150px;
-        height: auto;
-        float: left;
-        box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        padding: 0px 0px 20px 20px;
-    }
+.footer:hover {
+    height: 100px;
+}
 
-        .footer .col h1 {
-            margin: 0;
-            padding: 0;
-            font-family: inherit;
-            font-size: 12px;
-            line-height: 17px;
-            padding: 20px 0px 5px 0px;
-            font-weight: normal;
-            text-transform: uppercase;
-            letter-spacing: 0.250em;
-            color: white;
-            font-size: 14px;
-            font-family: inherit;
-            font-weight: bold;
-        }
+.footer .col {
+    width: 150px;
+    height: auto;
+    float: left;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0px 0px 20px 20px;
+}
 
-        .footer .col ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
+.footer .col h1 {
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 17px;
+    padding: 20px 0px 5px 0px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.250em;
+    color: white;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: bold;
+}
 
-            .footer .col ul li {
-                color: #999999;
-                font-size: 14px;
-                font-family: inherit;
-                font-weight: bold;
-                padding: 5px 0px 5px 0px;
-                cursor: pointer;
-                transition: .2s;
-                -webkit-transition: .2s;
-                -moz-transition: .2s;
-            }
+.footer .col ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer .col ul li {
+    color: #999999;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: bold;
+    padding: 5px 0px 5px 0px;
+    cursor: pointer;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+}
 
 .social ul li {
     display: inline-block;
@@ -92,13 +93,13 @@
         width: 33%;
     }
 
-        .footer .col h1 {
-            font-size: 14px;
-        }
+    .footer .col h1 {
+        font-size: 14px;
+    }
 
-        .footer .col ul li {
-            font-size: 13px;
-        }
+    .footer .col ul li {
+        font-size: 13px;
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -106,13 +107,13 @@
         width: 50%;
     }
 
-        .footer .col h1 {
-            font-size: 14px;
-        }
+    .footer .col h1 {
+        font-size: 14px;
+    }
 
-        .footer .col ul li {
-            font-size: 13px;
-        }
+    .footer .col ul li {
+        font-size: 13px;
+    }
 }
 
 @media only screen and (max-width: 340px) {

@@ -1,4 +1,4 @@
-import React, {Component, useEffect, useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import PlayerDetails from './PlayerDetails.js';
 import PlayerControls from './PlayerControls';
 
@@ -20,11 +20,11 @@ const Player = (props) => {
             props.setCurrentSongIndex(() => {
                 let temp = props.currentSongIndex;
                 temp++;
-                
+
                 if (temp > props.songs.length - 1) {
                     temp = 0;
                 }
-                
+
                 return temp;
             });
         } else {

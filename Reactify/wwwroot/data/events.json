@@ -1,21 +1,23 @@
 [
-
   {
     "Id": "1",
     "Band": "Justin Bieber",
-    "Genre": [ "Pop" ],
+    "Genre": [
+      "Pop"
+    ],
     "Date": "2022-03-29",
     "Location": "Montreal, QC, Canada",
     "Venue": "Bell Centre",
     "img": "https://images.sk-static.com/images/media/profile_images/artists/2596951/huge_avatar",
     "Url": "https://www.songkick.com/concerts/39380433-justin-bieber-at-bell-centre"
   },
-
-
   {
     "Id": "2",
     "Band": "Alicia Keys",
-    "Genre": [ "R&B", "Funk & Soul" ],
+    "Genre": [
+      "R&B",
+      "Funk & Soul"
+    ],
     "Date": "2022-06-26",
     "Location": "Krakow, Poland",
     "Venue": "TAURON Arena",
@@ -25,7 +27,10 @@
   {
     "Id": "3",
     "Band": "Queen",
-    "Genre": [ "Rock", "Indie & Alt" ],
+    "Genre": [
+      "Rock",
+      "Indie & Alt"
+    ],
     "Date": "2022-06-29",
     "Location": "Munich, Germany",
     "Venue": "Olympiahalle",
@@ -35,7 +40,10 @@
   {
     "Id": "4",
     "Band": "The Killers",
-    "Genre": [ "Indie & Alt", "Rock" ],
+    "Genre": [
+      "Indie & Alt",
+      "Rock"
+    ],
     "Date": "2022-07-13",
     "Location": "Ostrava, Czech Republic",
     "Venue": "Colours of Ostrava",
@@ -45,7 +53,10 @@
   {
     "Id": "5",
     "Band": "Elton John",
-    "Genre": [ "R&B", "Funk & Soul" ],
+    "Genre": [
+      "R&B",
+      "Funk & Soul"
+    ],
     "Date": "2022-10-02",
     "Location": "Munich, Germany",
     "Venue": "Olympiahalle",
@@ -55,7 +66,11 @@
   {
     "Id": "6",
     "Band": "The Weeknd",
-    "Genre": [ "R&B", "Hip-Hop", "Pop" ],
+    "Genre": [
+      "R&B",
+      "Hip-Hop",
+      "Pop"
+    ],
     "Date": "2022-11-04",
     "Location": "Budapest, Hungary",
     "Venue": "Budapest Park",

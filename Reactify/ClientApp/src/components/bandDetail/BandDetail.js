@@ -1,5 +1,5 @@
-﻿import React, { useState } from 'react';
-import axios from 'axios'; 
+﻿import React, {useState} from 'react';
+import axios from 'axios';
 import Band from './Band.js';
 
 import './BandDetail.css';
@@ -16,7 +16,7 @@ const BandDetail = () => {
 
     const handleSubmit = () => {
         const inputData = document.getElementById("search-band-field").value;
-        axios.post("band-detail", { "InputName": inputData })
+        axios.post("band-detail", {"InputName": inputData})
             .then(response => {
                 axios.get("band-detail")
                     .then(response => {
@@ -39,10 +39,11 @@ const BandDetail = () => {
     return (
         <div className="container artists">
             <div className="band-detail-search">
-                <input type="text" name="searched-band-name" id="search-band-field" placeholder="Search for an artist..." />
-                <button className="search-band" onClick={handleSubmit}><i className="fa fa-search" /></button>
+                <input type="text" name="searched-band-name" id="search-band-field"
+                       placeholder="Search for an artist..."/>
+                <button className="search-band" onClick={handleSubmit}><i className="fa fa-search"/></button>
             </div>
-            <Band bandData={searchedBand} />
+            <Band bandData={searchedBand}/>
         </div>
     )
 }

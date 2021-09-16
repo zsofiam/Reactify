@@ -1,22 +1,16 @@
-﻿
+﻿using System;
 using System.Collections.Generic;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using Reactify.Models;
-using System.Text.Json;
-using System.Text.Json.Serialization;
-using System;
-using System.IO;
-using Microsoft.AspNetCore.Hosting;
-using System.Linq;
 using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Text.Json;
+using Microsoft.AspNetCore.Hosting;
+using Reactify.Models;
 
 namespace Reactify.Services
 {
     public class JsonFileEventService
     {
-     
-
         public JsonFileEventService(IWebHostEnvironment webHostEnvironment)
         {
             WebHostEnvironment = webHostEnvironment;
@@ -24,10 +18,7 @@ namespace Reactify.Services
 
         public IWebHostEnvironment WebHostEnvironment { get; }
 
-        private string JsonFileName
-        {
-            get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "events.json"); }
-        }
+        private string JsonFileName => Path.Combine(WebHostEnvironment.WebRootPath, "data", "events.json");
 
         public IEnumerable<Event> GetEvents()
         {
@@ -39,9 +30,9 @@ namespace Reactify.Services
         private void FormatEventDates(IEnumerable<Event> events)
         {
             events.ToList().ForEach(Event =>
-    {
-        Event.Date = Convert.ToDateTime(Event.Date).ToString("D", new CultureInfo("en-US"));
-    });
+            {
+                Event.Date = Convert.ToDateTime(Event.Date).ToString("D", new CultureInfo("en-US"));
+            });
         }
 
 
@@ -49,7 +40,6 @@ namespace Reactify.Services
         {
             using (var jsonFileReader = File.OpenText(JsonFileName))
             {
-
                 return JsonSerializer.Deserialize<List<Event>>(jsonFileReader.ReadToEnd(),
                     new JsonSerializerOptions
                     {

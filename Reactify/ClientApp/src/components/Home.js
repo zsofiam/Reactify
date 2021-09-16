@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../custom.css';
 
 const Home = () => {
@@ -7,7 +7,7 @@ const Home = () => {
         <>
             <div className="background-container" data-testid="background-video">
                 <video autoPlay loop muted>
-                    <source src="./video/home.mp4" type="video/mp4" />
+                    <source src="./video/home.mp4" type="video/mp4"/>
                 </video>
             </div>
 

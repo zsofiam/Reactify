@@ -81,8 +81,8 @@ body {
     outline: none;
     cursor: pointer;
     width: 100%;
-    -webkit-transition: background-position .7s,box-shadow .4s;
-    transition: background-position .7s,box-shadow .4s;
+    -webkit-transition: background-position .7s, box-shadow .4s;
+    transition: background-position .7s, box-shadow .4s;
     background-size: 110%;
 }
 
@@ -90,12 +90,12 @@ body {
     background-position: 0% 30%;
 }
 
-.one:hover:after{
+.one:hover:after {
     right: -40px;
-    -webkit-transition: right .4s,-webkit-transform 30s .2s linear;
-    transition: right .4s,-webkit-transform 30s .2s linear;
-    transition: right .4s,transform 30s .2s linear;
-    transition: right .4s,transform 30s .2s linear,-webkit-transform 30s .2s linear;
+    -webkit-transition: right .4s, -webkit-transform 30s .2s linear;
+    transition: right .4s, -webkit-transform 30s .2s linear;
+    transition: right .4s, transform 30s .2s linear;
+    transition: right .4s, transform 30s .2s linear, -webkit-transform 30s .2s linear;
 }
 
 .one:before, .one:after {
@@ -103,6 +103,7 @@ body {
     display: block;
     position: absolute;
 }
+
 .one:before {
     -webkit-transition: all 1s;
     transition: all 1s;
@@ -111,7 +112,7 @@ body {
     top: 19px;
 }
 
-.one:after{
+.one:after {
     -webkit-transition: right .4s, -webkit-transform .2s;
     transition: right .4s, -webkit-transform .2s;
     transition: right .4s, transform .2s;
@@ -120,7 +121,7 @@ body {
     opacity: .3;
     right: -120px;
     top: -17px;
-    }
+}
 
 .one {
     box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset, 0px 0px 10px 0px #782CDA;
@@ -128,25 +129,25 @@ body {
     background-image: linear-gradient(to bottom, #782CDA, rgba(126, 94, 162, 0.51)), url("https://www.sheerid.com/shoppers/wp-content/uploads/sites/4/2020/05/spotify-deal-page-467x316.jpg");
 }
 
-    .one:hover {
-        box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset, 0px 0px 30px 0px #782CDA;
-    }
+.one:hover {
+    box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset, 0px 0px 30px 0px #782CDA;
+}
 
-        .one:hover:after {
-            -webkit-transform: scale(1);
-            transform: scale(1);
-        }
+.one:hover:after {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
 
-        .one:hover:before {
-            -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-        }
+.one:hover:before {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
 
-    .one:after, .one:before {
-                content: "";
-    }
+.one:after, .one:before {
+    content: "";
+}
 
-    .one b {
-        color: #DDA6FF;
-        font-weight: 700;
-    }
+.one b {
+    color: #DDA6FF;
+    font-weight: 700;
+}
