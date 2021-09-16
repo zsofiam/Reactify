@@ -1,7 +1,7 @@
 ﻿.band-details {
     margin-top: 1rem;
 }
-.band-details, .band-detail-search {
+.band-details {
     padding: 0.5rem 0;
 }
 
@@ -27,4 +27,31 @@
 .band-empty {
     margin-top: 1.25rem;
     text-align: center;
+}
+
+.search-band {
+    padding: 0.4rem 0.6rem;
+    margin-top: 0;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+#search-band-field {
+    padding: 0.3rem 0;
+}
+.band-detail-search {
+    
+}
+.artists {
+    min-height: 75vh;
+}
+#noresult {
+    margin-top: 20vh;
+}
+@media screen and (max-width: 600px) {
+    .band-detail-search {
+        display: flex;
+        justify-content: center;
+    }
 }

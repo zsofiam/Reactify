@@ -17,7 +17,7 @@ const Band = (props) => {
             </div >
             :
             <div className="band-empty">
-                <p>Search for the name of an artist to see the result</p>
+                <p id="noresult">Search for the name of an artist to see the result</p>
             </div>
             }
         </>

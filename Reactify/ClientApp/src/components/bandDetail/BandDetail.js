@@ -37,10 +37,10 @@ const BandDetail = () => {
     }
 
     return (
-        <div className="container">
+        <div className="container artists">
             <div className="band-detail-search">
-                <input type="text" name="searched-band-name" id="search-band-field"/>
-                <button className="search-band" onClick={handleSubmit}>Search</button>
+                <input type="text" name="searched-band-name" id="search-band-field" placeholder="Search for an artist..." />
+                <button className="search-band" onClick={handleSubmit}><i className="fa fa-search" /></button>
             </div>
             <Band bandData={searchedBand} />
         </div>
