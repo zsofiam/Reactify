@@ -1,0 +1,20 @@
+﻿import React from 'react';
+
+const Event = (props) => {
+
+    const { id,img,band,genre,date,venue,url } = props.event;
+    return (
+
+        <tr key={id}>
+            <td><img src={img} /> </td>
+            <td>{band}</td>
+            <td>{genre}</td>
+            <td>{date}</td>
+            <td>{venue}</td>
+            <td><a href={url} target="_blank" >Buy Ticket</a></td>
+        </tr>
+        
+    )
+}
+
+export default Event;

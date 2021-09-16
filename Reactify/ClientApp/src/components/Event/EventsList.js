@@ -1,6 +1,7 @@
 ﻿import React, { Component, useState, useEffect } from "react";
 import axios from "axios";
 import './EventsList.css';
+import Event from './Event.js';
 
 const EventsList = () => {
 
@@ -31,15 +32,10 @@ const EventsList = () => {
                 <tbody>
                     {events.map(event =>
 
-
-                        <tr key={event.id}>
-                            <td><img src={event.img}/ > </td>
-                            <td>{event.band}</td>
-                            <td>{event.genre}</td>
-                            <td>{event.date}</td>
-                            <td>{event.venue}</td>
-                            <td><a href={event.url} target="_blank" >Buy Ticket</a></td>
-                        </tr>
+                        <Event
+          key={event.id}
+          event={event}
+        />
                     )}
             </tbody>
             </table>
