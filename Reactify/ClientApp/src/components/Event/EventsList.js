@@ -33,9 +33,9 @@ const EventsList = () => {
                     {events.map(event =>
 
                         <Event
-          key={event.id}
-          event={event}
-        />
+                            key={event.Id}
+                            event={event}
+                        />
                     )}
             </tbody>
             </table>

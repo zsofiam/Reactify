@@ -5,7 +5,7 @@ const Event = (props) => {
     const { id,img,band,genre,date,venue,url } = props.event;
     return (
 
-        <tr key={id}>
+        <tr>
             <td><img src={img} /> </td>
             <td>{band}</td>
             <td>
