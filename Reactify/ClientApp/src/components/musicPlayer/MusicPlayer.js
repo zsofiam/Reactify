@@ -1,8 +1,8 @@
 import axios from "axios";
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import './MusicPlayer.css';
 import Player from './Player.js';
-import {useLocation} from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const MusicPlayer = (detail) => {
     const [songs, setSongs] = useState({});
@@ -34,7 +34,7 @@ const MusicPlayer = (detail) => {
     }, [currentSongIndex]);
 
     return (
-        <div className="MusicPlayer">
+        <div className="MusicPlayer" data-testid="music-player">
             {isAlbumReady ?
                 <Player
                     currentSongIndex={currentSongIndex}
@@ -45,7 +45,7 @@ const MusicPlayer = (detail) => {
                 :
                 <div>:(</div>
             }
-        </div>
+        </div >
     );
 }
 
