@@ -30,7 +30,7 @@ const NavBar = () => {
                 <div className="search-container">
                     <input name="track"
                         id="track" type="text"
-                        placeholder="Search for a music.."
+                        placeholder="........."
                         onChange={(e) => {
                             setTrack(e.target.value)
                         }} />
