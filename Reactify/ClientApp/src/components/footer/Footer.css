@@ -2,17 +2,21 @@
     width: 100%;
     position: relative;
     height: auto;
-    background-color: #333;
+    background-color: #191414;
+    transition-duration: 0.300s;
 }
 
+    .footer:hover {
+        height: 100px;
+    }
     .footer .col {
-        width: 190px;
+        width: 150px;
         height: auto;
         float: left;
         box-sizing: border-box;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
-        padding: 0px 20px 20px 20px;
+        padding: 0px 0px 20px 20px;
     }
 
         .footer .col h1 {
@@ -55,7 +59,7 @@
 }
 
 .footer .col ul li:hover {
-    color: #ffffff;
+    color: #1DB954;
     transition: .1s;
     -webkit-transition: .1s;
     -moz-transition: .1s;
