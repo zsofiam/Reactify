@@ -16,33 +16,45 @@ const EventsList = () => {
     }, []);
 
     return (
-        <div className="container" id="event-table-container">
-            <div className="events-container">
-                <table className='table table-striped' aria-labelledby="tabelLabel">
-                    <thead>
-                        <tr>
-                            <th className="first-event-column"></th>
-                        <th>Band</th>
-                        <th>Genre</th>
-                        <th>Date</th>
-                        <th>Venue</th>
-                        <th></th>
-                    </tr>
-                    </thead>
-                    <tbody>
+    //
+    // <div className="container" id="event-table-container">
+    //     <div className="events-container">
+    //         <table className='table table-striped' aria-labelledby="tabelLabel">
+    //             <thead>
+    //             <tr>
+    //                 <th className="first-event-column"></th>
+    //                 <th>Band</th>
+    //                 <th>Genre</th>
+    //                 <th>Date</th>
+    //                 <th>Venue</th>
+    //                 <th></th>
+    //             </tr>
+    //             </thead>
+    //             <tbody>
+    //             {events.map(event =>
+    //
+    //                 <Event
+    //                     key={event.Id}
+    //                     event={event}
+    //                 />
+    //             )}
+    //             </tbody>
+    //         </table>
+    //
+    //     </div>
+    //
+    // </div>
+<div className="events-div">
+                <ul className="card-wrapper">
                     {events.map(event =>
-
                         <Event
                             key={event.Id}
                             event={event}
                         />
                     )}
-                    </tbody>
-                </table>
+                </ul>
+</div>
 
-            </div>
-
-        </div>
     );
 
 }
