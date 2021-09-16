@@ -19,7 +19,7 @@ const Footer = () => {
                             <li>
                                 <a href="https://www.facebook.com/"
                                     aria-label='Facebook'
-                                    rel="noreferrer"
+                                    rel="noreferrer" target="_blank"
                                 >
                                     <i className='fab fa-facebook-f' />
                                 </a>
@@ -53,7 +53,7 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className="clearfix"/>
+                    <div className="clearfix" />
                 </div>
             </div>
         </>
