@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from './components/Home';
 import MusicPlayer from './components/musicPlayer/MusicPlayer';
 import NavBar from './components/navBar/NavBar.js';
 import Footer from './components/footer/Footer.js';
+import BandDetail from './components/bandDetail/BandDetail';
 import EventsList from './components/EventsList';
 
 import './custom.css'
@@ -20,6 +21,9 @@ function App() {
 
                 <Route path="/player" exact>
                     <MusicPlayer />
+                </Route>
+                <Route path='/search-band' exact>
+                    <BandDetail />
                 </Route>
 
                 <Route path="/events" exact>
