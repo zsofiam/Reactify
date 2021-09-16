@@ -11,8 +11,8 @@ const Home = () => {
                 </video>
             </div>
 
-            <div class='container-button'>
-                <button class='one'>Play some <b>amazing</b> music!</button>
+            <div className='container-button'>
+                <button className='one'>Play some <b>amazing</b> music!</button>
             </div>
         </>
     );

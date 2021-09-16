@@ -1,4 +1,4 @@
-﻿import React, { Component, useState, useEffect } from "react";
+﻿import React, {Component, useState, useEffect} from "react";
 import axios from "axios";
 import './EventsList.css';
 import Event from './Event.js';
@@ -18,8 +18,8 @@ const EventsList = () => {
     return (
         <>
             <div className="events-container">
-        <table className='table table-striped' aria-labelledby="tabelLabel">
-                <thead>
+                <table className='table table-striped' aria-labelledby="tabelLabel">
+                    <thead>
                     <tr>
                         <th></th>
                         <th>Band</th>
@@ -28,8 +28,8 @@ const EventsList = () => {
                         <th>Venue</th>
                         <th></th>
                     </tr>
-                </thead>
-                <tbody>
+                    </thead>
+                    <tbody>
                     {events.map(event =>
 
                         <Event
@@ -37,12 +37,12 @@ const EventsList = () => {
                             event={event}
                         />
                     )}
-            </tbody>
-            </table>
+                    </tbody>
+                </table>
 
-                </div>
+            </div>
 
-            </>
+        </>
     );
 
 }
