@@ -2,7 +2,7 @@
     width: 100%;
     position: relative;
     height: auto;
-    background-color: black;
+    background-color: transparent;
     transition-duration: 0.300s;
 }
 

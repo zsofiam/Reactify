@@ -21,7 +21,7 @@ code {
 }
 
 body {
-    background-color: #DDD;
+    background: url("https://images.pexels.com/photos/2224399/pexels-photo-2224399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
 }
 
 /*html, body {
@@ -67,13 +67,6 @@ body {
     background: transparent;
 }
 
-.container-button p{
-    font-size: 50px;
-    position: relative;
-    color: #191414;
-    font-weight: bold;
-
-}
 
 .one {
     border: none;
@@ -133,15 +126,13 @@ body {
 
 .one {
     box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset, 0px 0px 10px 0px rgb(255,255,255);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#782CDA),
-    to(rgba(255, 255,255 0.51))), url("https://www.incimages.com/uploaded_files/image/1920x1080/getty_506068552_298876.jpg");
-    background-image: linear-gradient(to bottom,#191414, rgba(255, 255, 255, 0.51)),
-        url("https://www.incimages.com/uploaded_files/image/1920x1080/getty_506068552_298876.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rebeccapurple), to(rgba(255, 255,255 0.51))), url("https://www.incimages.com/uploaded_files/image/1920x1080/getty_506068552_298876.jpg");
+    background-image: linear-gradient(to bottom,rebeccapurple, rgba(255, 255, 255, 0.51)), url("https://www.incimages.com/uploaded_files/image/1920x1080/getty_506068552_298876.jpg");
 }
 
-.one:hover {
-    box-shadow: 0px 0px 0px 2px rgba(25, 20, 20, 0.16) inset, 0px 0px 30px 0px #1DB954;
-}
+    .one:hover {
+        box-shadow: 0px 0px 0px 2px rgba(25, 20, 20, 0.16) inset, 0px 0px 30px 0px rebeccapurple;
+    }
 
 .one:hover:after {
     -webkit-transform: scale(1);
@@ -158,7 +149,7 @@ body {
     content: "\f144";
 }
 
-.one b {
-    color: #1DB954;
-    font-weight: 700;
-}
+    .one b {
+        color: purple;
+        font-weight: 700;
+    }

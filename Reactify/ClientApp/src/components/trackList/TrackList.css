@@ -1,5 +1,5 @@
 ﻿.container {
-    background-color: #fff;
+    background-color:transparent;
     padding: 2rem;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -63,7 +63,7 @@
 .container .list .num h3 {
     position: relative;
     left: -1.5rem;
-    color: #3d3d3d;
+    color: white;
     font-size: 0.85rem;
     transition: 0.25s;
 }
@@ -71,15 +71,17 @@
 .container .list .num:hover {
     background-color: #fafafa;
     cursor: pointer;
+    
 }
 
 .container .list .num:hover:before {
     opacity: 0.2;
 }
 
-.container .list .num:hover h3 {
-    left: 1rem;
-}
+    .container .list .num:hover h3 {
+        left: 1rem;
+        color: black;
+    }
 
 .message {
     color: #fff;
