@@ -2,12 +2,12 @@
     width: 100%;
     position: relative;
     height: auto;
-    background-color: #191414;
+    background-color: black;
     transition-duration: 0.300s;
 }
 
 .footer:hover {
-    height: 100px;
+    height: 120px;
 }
 
 .footer .col {
