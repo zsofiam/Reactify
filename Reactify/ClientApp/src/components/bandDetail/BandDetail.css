@@ -1,12 +1,23 @@
 ﻿.band-details {
-    margin-top: 50px;
+    margin-top: 1rem;
+}
+.band-details {
+    padding: 0.5rem 0;
 }
 
 .band-banner {
-;
+    display: flex;
+    padding: 1rem 0;
+    justify-content: center;
+}
+.band-banner img {
+    width: 100%;
+    height: auto;
 }
 
-.band-info {
+.band-info{
+}
+.band-info:hover {
 
 }
 
@@ -14,6 +25,34 @@
 
 }
 .band-empty {
-    margin-top: 80px;
+    margin-top: 1.25rem;
     text-align: center;
+}
+
+.search-band {
+    padding: 0.4rem 0.6rem;
+    margin-top: 0;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+.search-band:hover {
+    background: #1DB954;
+}
+#search-band-field {
+    padding: 0.3rem 0;
+}
+
+.artists {
+    min-height: 75vh;
+}
+#noresult {
+    margin-top: 20vh;
+}
+@media screen and (max-width: 600px) {
+    .band-detail-search {
+        display: flex;
+        justify-content: center;
+    }
 }
