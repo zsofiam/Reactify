@@ -16,12 +16,12 @@ const EventsList = () => {
     }, []);
 
     return (
-        <>
+        <div className="container" id="event-table-container">
             <div className="events-container">
                 <table className='table table-striped' aria-labelledby="tabelLabel">
                     <thead>
-                    <tr>
-                        <th></th>
+                        <tr>
+                            <th className="first-event-column"></th>
                         <th>Band</th>
                         <th>Genre</th>
                         <th>Date</th>
@@ -42,7 +42,7 @@ const EventsList = () => {
 
             </div>
 
-        </>
+        </div>
     );
 
 }
