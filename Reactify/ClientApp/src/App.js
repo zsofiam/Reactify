@@ -30,10 +30,8 @@ function App() {
                     <EventsList/>
                 </Route>
 
-                <Route path="/track" exact>
-                    <TrackList/>
-                </Route>
-
+                <Route path="/track/:track" component={TrackList}/>
+  
             </Switch>
             <Footer/>
         </Router>

@@ -1,6 +1,6 @@
 ﻿import React from "react";
 import { render, cleanup } from '@testing-library/react';
-import Home from "../components/Home";
+import MusicPlayer from "../components/musicPlayer/MusicPlayer";
 import "@testing-library/jest-dom/extend-expect";
 
 beforeAll(() =>
@@ -10,17 +10,11 @@ beforeAll(() =>
 );
 
 test('home page icons and bg reders without crashing', () => {
-    const { getByTestId } = render(<Home />);
+    const { getByTestId } = render(<MusicPlayer />);
     const background = getByTestId('music-player');
 
     expect(background).toBeTruthy();
 })
 
-
-test('home page icons and bg reders without crashing', () => {
-    const { getByTestId } = render(<Home />);
-    const background = getByTestId('play-music-button');
-    expect(background).toBeTruthy();
-})
 
 afterEach(cleanup);

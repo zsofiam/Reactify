@@ -23,13 +23,21 @@ namespace Reactify.Controllers
         [HttpGet]
         public async Task<List<Track>> GetResultTracks([FromQuery] string albumId)
         {
+
+            if (albumId == "" || albumId is null) albumId = "302127";
+
             var url = "https://api.deezer.com/album/" + albumId.Trim().Replace(" ", "_");
+
+            var tracks = new List<Track>();
+
             using (var httpClient = new HttpClient())
             {
+                try { } catch { }
                 httpClient.DefaultRequestHeaders.Add("User-Agent", "Anything");
                 httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                 var response = httpClient.GetAsync(url).Result;
+
                 response.EnsureSuccessStatusCode();
                 var apiResponse = await response.Content.ReadAsStringAsync();
                 var albumData = JObject.Parse(apiResponse);
@@ -37,21 +45,20 @@ namespace Reactify.Controllers
 
                 var album = new Album
                 {
-                    Title = (string) albumData["title"],
-                    Cover = (string) albumData["cover_xl"],
-                    Artist = (string) albumData["artist"]?["name"]
+                    Title = (string)albumData["title"],
+                    Cover = (string)albumData["cover_xl"],
+                    Artist = (string)albumData["artist"]?["name"]
                 };
-                var tracks = new List<Track>();
 
                 foreach (var track in albumData["tracks"]["data"])
                 {
                     var song = new Track
                     {
-                        Preview = (string) track["preview"],
-                        Title = (string) track["title"],
-                        Image = (string) albumData["cover_xl"],
-                        ArtistName = (string) albumData["artist"]?["name"],
-                        Id = (string) track["id"]
+                        Preview = (string)track["preview"],
+                        Title = (string)track["title"],
+                        Image = (string)albumData["cover_xl"],
+                        ArtistName = (string)albumData["artist"]?["name"],
+                        Id = (string)track["id"]
                     };
 
                     tracks.Add(song);

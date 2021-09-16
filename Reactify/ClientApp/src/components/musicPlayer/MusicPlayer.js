@@ -13,6 +13,7 @@ const MusicPlayer = (detail) => {
     const [isAlbumReady, setIsAlbumReady] = useState(false);
 
     useEffect(() => {
+        console.log(location.state.detail)
         axios
             .get(`player?albumId=${location.state.detail}`)
             .then(

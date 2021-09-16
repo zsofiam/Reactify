@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './NavBar.css';
-import {useHistory} from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 const NavBar = () => {
     const mobileMenu = () => {
@@ -14,32 +14,33 @@ const NavBar = () => {
 
     const [track, setTrack] = useState("");
     const history = useHistory();
-    const goToTracklist = () => history.push({
-        pathname: "/track",
-        state: {detail: track}
-    });
+    const goToTracklist = () => {
+
+        console.log("here");
+        history.push( `/track/${track}`);
+    }
 
     return (
         <>
             <div className="topnav" id="myTopnav">
-                <a href="/" className="icon-spotify"><img src="./images/Reactify.png" alt="Reactify logo"/></a>
+                <a href="/" className="icon-spotify"><img src="./images/Reactify.png" alt="Reactify logo" /></a>
 
                 <a href="/search-band">Search Artists</a>
 
                 <div className="search-container">
                     <input name="track"
-                           id="track" type="text"
-                           placeholder="Search.."
-                           onChange={(e) => {
-                               setTrack(e.target.value)
-                           }}/>
-                    <button type="submit" onClick={goToTracklist}><i className="fa fa-search"/></button>
+                        id="track" type="text"
+                        placeholder="Search.."
+                        onChange={(e) => {
+                            setTrack(e.target.value)
+                        }} />
+                    <button onClick={goToTracklist}><i className="fa fa-search" /></button>
                 </div>
 
                 <a href="/events">Search Events</a>
 
                 <a href="javascript:void(0);" className="icon" onClick={mobileMenu}>
-                    <i className="fa fa-bars"/>
+                    <i className="fa fa-bars" />
                 </a>
             </div>
         </>
