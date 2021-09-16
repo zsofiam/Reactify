@@ -30,7 +30,6 @@ const TrackList = (detail) => {
 
 
     return (
-
         <div className="container">
             {isResultAvailable ?
                 <ul className="list">
@@ -40,13 +39,12 @@ const TrackList = (detail) => {
                         <li className="num"
                             onClick={goToPlayer}
                             name={song.album.id}
-                            onMouseOver={(e) => { setAlbumId(e.target.name) }}
-                            onFocus={(e) => { setAlbumId(e.target.name) }}>
+                            onMouseOver={(e) => { setAlbumId(song.album.id) }}>
                             <h3><img src={song.album.cover} alt="" /></h3>
                             <h3> <strong> {song.title}</strong></h3>
                             <h3>{song.artist.name}</h3>
                         </li>
-                    )
+                        )
                     )}
 
                 </ul>
