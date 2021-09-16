@@ -37,12 +37,13 @@
     border: none;
     cursor: pointer;
 }
+.search-band:hover {
+    background: #1DB954;
+}
 #search-band-field {
     padding: 0.3rem 0;
 }
-.band-detail-search {
-    
-}
+
 .artists {
     min-height: 75vh;
 }
