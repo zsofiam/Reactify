@@ -67,6 +67,13 @@ body {
     background: transparent;
 }
 
+.container-button p{
+    font-size: 50px;
+    position: relative;
+    color: #191414;
+    font-weight: bold;
+
+}
 
 .one {
     border: none;
@@ -77,7 +84,8 @@ body {
     margin-bottom: 20px;
     font-size: 20px;
     position: relative;
-    color: white;
+    color: #191414;
+    font-weight: bold;
     outline: none;
     cursor: pointer;
     width: 100%;
@@ -124,15 +132,15 @@ body {
 }
 
 .one {
-    box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset, 0px 0px 10px 0px #782CDA;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#782CDA), 
-    to(rgba(126, 94, 162, 0.51))), url("https://www.sheerid.com/shoppers/wp-content/uploads/sites/4/2020/05/spotify-deal-page-467x316.jpg");
-    background-image: linear-gradient(to bottom, #782CDA, rgba(126, 94, 162, 0.51)), 
-        url("https://www.sheerid.com/shoppers/wp-content/uploads/sites/4/2020/05/spotify-deal-page-467x316.jpg");
+    box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset, 0px 0px 10px 0px rgb(255,255,255);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#782CDA),
+    to(rgba(255, 255,255 0.51))), url("https://www.incimages.com/uploaded_files/image/1920x1080/getty_506068552_298876.jpg");
+    background-image: linear-gradient(to bottom,#191414, rgba(255, 255, 255, 0.51)),
+        url("https://www.incimages.com/uploaded_files/image/1920x1080/getty_506068552_298876.jpg");
 }
 
 .one:hover {
-    box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset, 0px 0px 30px 0px #782CDA;
+    box-shadow: 0px 0px 0px 2px rgba(25, 20, 20, 0.16) inset, 0px 0px 30px 0px #1DB954;
 }
 
 .one:hover:after {
@@ -146,10 +154,11 @@ body {
 }
 
 .one:after, .one:before {
-    content: "";
+    font-family: "Font Awesome 5 Free";
+    content: "\f144";
 }
 
 .one b {
-    color: #DDA6FF;
+    color: #1DB954;
     font-weight: 700;
 }

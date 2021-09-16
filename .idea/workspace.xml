@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="961dd2de-8947-46cd-88ba-3c1cea4ebc6d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reactify/ClientApp/src/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/Reactify/ClientApp/src/components/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reactify/ClientApp/src/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/Reactify/ClientApp/src/custom.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +71,7 @@
       <workItem from="1631698383289" duration="1311000" />
       <workItem from="1631699773746" duration="828000" />
       <workItem from="1631802744340" duration="293000" />
+      <workItem from="1631811197086" duration="1562000" />
     </task>
     <servers />
   </component>
