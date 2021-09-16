@@ -10,6 +10,10 @@ const Home = () => {
                     <source src="./video/home.mp4" type="video/mp4" />
                 </video>
             </div>
+
+            <div class='container-button'>
+                <button class='one'>Play some <b>amazing</b> music!</button>
+            </div>
         </>
     );
 
