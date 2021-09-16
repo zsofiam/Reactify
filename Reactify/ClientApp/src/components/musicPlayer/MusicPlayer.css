@@ -7,12 +7,12 @@
 
 .c-player {
     display: block;
-    background-color: #313131;
+    background-color:black;
     display: block;
     margin: 0px auto;
     padding: 50px;
     border-radius: 16px;
-    box-shadow: inset -6px -6px 12px rgba(0, 0, 0, 0.8), inset 6px 6px 12px rgba(255, 255, 255, 0.4);
+    box-shadow: inset -6px -6px 12px rgba(25, 20, 20, 0.8), inset 6px 6px 12px rgba(255, 255, 255, 0.4);
 }
 
 .c-player > h4 {
@@ -50,17 +50,6 @@
     box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.8), -6px -6px 12px rgba(255, 255, 255, 0.4);
 }
 
-/*    .c-player--details .details-img:after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: -25px;
-        left: -25px;
-        right: -25px;
-        bottom: -25px;
-        border-radius: 50%;
-        border: 3px dashed rgba(255, 206, 0, 1);
-    }*/
 
 .c-player--details .details-title {
     color: #EEE;
@@ -93,7 +82,7 @@
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8), -4px -4px 10px rgba(255, 255, 255, 0.4), inset -4px -4px 10px rgba(0, 0, 0, 0.4), inset 4px 4px 10px rgba(255, 255, 255, 0.4);
     border: none;
     outline: none;
-    background-color: #FFCE00;
+    background-color:#1DB954;
     color: #FFF;
     font-size: 24px;
     cursor: pointer;

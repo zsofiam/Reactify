@@ -1,6 +1,6 @@
 ﻿.topnav {
     overflow: hidden;
-    background-color: #191414
+    background-color:black;
 }
 
     .topnav a {
@@ -10,7 +10,7 @@
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
-        font-size: 23px;
+        font-size: 18px;
         font-family: inherit;
         font-weight: bold;
     }
@@ -104,5 +104,5 @@
 }
 
 .topnav .icon-spotify img {
-     width: 50px;
+     width: 30px;
 }
