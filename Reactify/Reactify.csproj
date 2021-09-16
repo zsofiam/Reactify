@@ -23,6 +23,7 @@
 
   <ItemGroup>
     <Folder Include="ClientApp\public\images\" />
+    <Folder Include="ClientApp\public\video\" />
     <Folder Include="ClientApp\src\Pages\" />
     <Folder Include="ClientApp\src\__test__\" />
     <Folder Include="Services\" />
