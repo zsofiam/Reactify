@@ -6,7 +6,7 @@ const Event = (props) => {
     return (
 
         <tr>
-            <td><img className="event-img" src={img} alt="event" /></td>
+            <td className="first-event-column"><img className="event-img" src={img} alt="event" /></td>
             <td>{band}</td>
             <td>
                 {genre.map((genreItem, i) => [

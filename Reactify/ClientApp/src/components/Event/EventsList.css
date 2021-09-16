@@ -1,5 +1,6 @@
 ﻿.event-img {
-    width: 20%;
+    width: 50%;
+
 }
 
 th, td {
@@ -12,8 +13,32 @@ th, td {
     justify-content: center;
     justify-items: center;
 }
+#event-table-container {
+    padding: 0;
+}
 
 .events-container table {
-
     justify-self: center;
+}
+.table th, .table td {
+    padding: 1.5rem 0;
+    vertical-align: central;
+}
+
+.table td.first-event-column {
+    max-width: 100px;
+    padding: 5px;
+    margin: 0;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 600px) {
+    .event-img {
+        display: none;
+    }
+}
+@media screen and (max-width: 990px) {
+    .event-img {
+        width: 100%;
+    }
 }
