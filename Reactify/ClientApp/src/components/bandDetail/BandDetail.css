@@ -1,12 +1,23 @@
 ﻿.band-details {
-    margin-top: 50px;
+    margin-top: 1rem;
+}
+.band-details, .band-detail-search {
+    padding: 0.5rem 0;
 }
 
 .band-banner {
-;
+    display: flex;
+    padding: 1rem 0;
+    justify-content: center;
+}
+.band-banner img {
+    width: 100%;
+    height: auto;
 }
 
-.band-info {
+.band-info{
+}
+.band-info:hover {
 
 }
 
@@ -14,6 +25,6 @@
 
 }
 .band-empty {
-    margin-top: 80px;
+    margin-top: 1.25rem;
     text-align: center;
 }

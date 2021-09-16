@@ -1,7 +1,8 @@
 ﻿import React, { useState } from 'react';
 import axios from 'axios'; 
-
 import Band from './Band.js';
+
+import './BandDetail.css';
 
 const BandDetail = () => {
     const [searchedBand, setSearchedBand] = useState({
@@ -37,9 +38,10 @@ const BandDetail = () => {
 
     return (
         <div className="container">
-            <input type="text" name="searched-band-name" id="search-band-field"/>
-            <button className="search-band" onClick={handleSubmit}>Search</button>
-
+            <div className="band-detail-search">
+                <input type="text" name="searched-band-name" id="search-band-field"/>
+                <button className="search-band" onClick={handleSubmit}>Search</button>
+            </div>
             <Band bandData={searchedBand} />
         </div>
     )
