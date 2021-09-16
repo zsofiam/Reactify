@@ -1,6 +1,6 @@
-using System;
+﻿using System;
 
-namespace Reactify
+namespace Reactify.Models
 {
     public class WeatherForecast
     {

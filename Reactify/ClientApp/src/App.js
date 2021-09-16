@@ -5,6 +5,7 @@ import MusicPlayer from './components/musicPlayer/MusicPlayer';
 import NavBar from './components/navBar/NavBar.js';
 import Footer from './components/footer/Footer.js';
 import BandDetail from './components/bandDetail/BandDetail';
+import EventsList from './components/Event/EventsList';
 
 import './custom.css'
 import TrackList from "./components/trackList/TrackList";
@@ -23,6 +24,10 @@ function App() {
                 </Route>
                 <Route path='/search-band' exact>
                     <BandDetail />
+                </Route>
+
+                <Route path="/events" exact>
+                    <EventsList />
                 </Route>
 
                 <Route path="/track" exact>
