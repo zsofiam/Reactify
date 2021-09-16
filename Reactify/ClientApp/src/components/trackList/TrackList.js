@@ -19,14 +19,13 @@ const TrackList = (detail) => {
                     setResultAvailable(true);
                     console.log(res.data);
                 })
-        console.log(songs);
     }, [])
 
     //"302127"
     const history = useHistory();
     const goToPlayer = () => history.push({
         pathname: "/player",
-        state: { detail: "302127" }
+        state: { detail: albumId }
     });
 
 
