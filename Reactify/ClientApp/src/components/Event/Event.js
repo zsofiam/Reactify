@@ -16,7 +16,7 @@ const Event = (props) => {
             </td>
             <td>{date}</td>
             <td>{venue}</td>
-            <td><a href={url} target="_blank">Buy Ticket</a></td>
+            <td><a class="event-link" href={url} target="_blank">Buy Ticket</a></td>
         </tr>
 
     )

@@ -31,6 +31,13 @@ th, td {
     margin: 0;
     vertical-align: middle;
 }
+.event-link {
+    font-weight: bold;
+}
+.event-link:hover {
+    color: #1DB954;
+    text-decoration: none;
+}
 
 @media screen and (max-width: 600px) {
     .event-img {
