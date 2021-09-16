@@ -32,8 +32,9 @@ const NavBar = () => {
                     <button type="submit" onClick={goToTracklist}><i className="fa fa-search" /></button>
                 </div>
 
-                <a href="masodik">Search Events</a>
 
+                <a href="masodik">Search Events</a>
+                <a href="/search-band">ArtistWiki</a>
 
                 <a href="javascript:void(0);" className="icon" onClick={mobileMenu}>
                     <i className="fa fa-bars" />
