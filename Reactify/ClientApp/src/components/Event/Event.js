@@ -2,11 +2,11 @@
 
 const Event = (props) => {
 
-    const {id, img, band, genre, date, venue, url} = props.event;
+    const { id, img, band, genre, date, venue, url } = props.event;
     return (
 
         <tr>
-            <td><img src={img}/></td>
+            <td><img className="event-img" src={img} alt="event" /></td>
             <td>{band}</td>
             <td>
                 {genre.map((genreItem, i) => [
