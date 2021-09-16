@@ -12,7 +12,6 @@ namespace Reactify.Controllers
 {
     [ApiController]
     [Route("player")]
-
     public class AlbumController : ControllerBase
     {
         private readonly ILogger<WeatherForecastController> _logger;
@@ -23,10 +22,8 @@ namespace Reactify.Controllers
         }
 
         [HttpGet]
-        public async Task<List<Album>> GetResultTracks([FromQuery] string albumId)  // it was type IEnumerable<Track> void or Task type?
+        public async Task<List<Track>> GetResultTracks([FromQuery] string albumId)
         {
-
-
             string url = "https://api.deezer.com/album/" + albumId.Trim().Replace(" ", "_");
             using (var httpClient = new HttpClient())
             {
@@ -37,28 +34,40 @@ namespace Reactify.Controllers
                 response.EnsureSuccessStatusCode();
                 string apiResponse = await response.Content.ReadAsStringAsync();
                 var albumData = JObject.Parse(apiResponse);
-                var result = new List<Album>();
+                
 
 
-                Album album = new Album();
-                album.Title = (string)albumData["title"];
-                album.Cover = (string)albumData["cover_xl"];
-                album.Artist = (string)albumData["artist"]["name"];
-                List<Track> tracks = new List<Track>();
+                var album = new Album
+                {
+                    Title = (string) albumData["title"],
+                    Cover = (string) albumData["cover_xl"],
+                    Artist = (string) albumData["artist"]?["name"]
+                };
+                var tracks = new List<Track>();
 
                 foreach (var track in albumData["tracks"]["data"])
                 {
-                    Track song = new Track();
-                    song.Preview = (string)track["preview"];
-                    song.Title = (string)track["title"];
+                    
+                    Track song = new Track
+                    {
+                        Preview = (string) track["preview"],
+                        Title = (string) track["title"],
+                        Image = (string) albumData["cover_xl"],
+                        ArtistName = (string) albumData["artist"]?["name"],
+                        Id = (string) track["id"],
+                    };
+                    
                     tracks.Add(song);
                 }
+
                 album.Tracks = tracks;
-                result.Add(album);
-                return result;
-
+                return tracks;
             }
-
         }
     }
 }
+//
+// title: "Test title",
+// artist: "Test artist",
+// img: "./images/dubstep.jpg",
+// src: "./music/bensound-dubstep.mp3"

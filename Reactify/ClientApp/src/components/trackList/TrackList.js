@@ -19,19 +19,17 @@ const TrackList = (detail) => {
                     setResultAvailable(true);
                     console.log(res.data);
                 })
-        console.log(songs);
     }, [])
 
     //"302127"
     const history = useHistory();
     const goToPlayer = () => history.push({
         pathname: "/player",
-        state: { detail: "302127" }
+        state: { detail: albumId }
     });
 
 
     return (
-
         <div className="container">
             {isResultAvailable ?
                 <ul className="list">
@@ -41,13 +39,12 @@ const TrackList = (detail) => {
                         <li className="num"
                             onClick={goToPlayer}
                             name={song.album.id}
-                            onMouseOver={(e) => { setAlbumId(e.target.name) }}
-                            onFocus={(e) => { setAlbumId(e.target.name) }}>
+                            onMouseOver={(e) => { setAlbumId(song.album.id) }}>
                             <h3><img src={song.album.cover} alt="" /></h3>
                             <h3> <strong> {song.title}</strong></h3>
                             <h3>{song.artist.name}</h3>
                         </li>
-                    )
+                        )
                     )}
 
                 </ul>
