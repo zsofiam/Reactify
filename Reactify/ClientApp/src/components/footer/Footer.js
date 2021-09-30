@@ -10,7 +10,14 @@ const Footer = () => {
                     <div className="col">
                         <h1>Support</h1>
                         <ul>
-                            <li>Contact us</li>
+                            <a
+                                href="https://instagram.com/"
+                                target='_blank'
+                                aria-label='Instagram'
+                                rel="noreferrer"
+                            > <i class="fas fa-headset"></i>
+
+</a>
                         </ul>
                     </div>
                     <div className="col social">
@@ -43,7 +50,7 @@ const Footer = () => {
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.youtube.com/"
+                                <a href="https://www.twitter.com/"
                                    target='_blank'
                                    aria-label='Youtube'
                                    rel="noreferrer"

@@ -24,7 +24,7 @@ namespace Reactify.Controllers
         public async Task<List<Track>> GetResultTracks([FromQuery] string albumId)
         {
 
-            if (albumId == "" || albumId is null) albumId = "302127";
+            if (albumId == "" || albumId is null) albumId = "262340352";
 
             var url = "https://api.deezer.com/album/" + albumId.Trim().Replace(" ", "_");
 

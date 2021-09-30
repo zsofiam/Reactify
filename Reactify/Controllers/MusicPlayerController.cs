@@ -25,7 +25,7 @@ namespace Reactify.Controllers
             GetResultTracks([FromQuery] string track)
         {
 
-            if (track is null || track == "") track = "christmas";
+            if (track is null || track == "") track = "halloween";
 
             var url = "https://api.deezer.com/search?q=track:" + track.Trim().Replace(" ", "_");
             using (var httpClient = new HttpClient())

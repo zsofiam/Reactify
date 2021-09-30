@@ -52,8 +52,6 @@ const Player = (props) => {
                             SkipSong={SkipSong}/>
             <p><strong>Next up:</strong>
                 {props.songs[props.nextSongIndex].title}
-                by
-                {props.songs[props.nextSongIndex].artist}
             </p>
         </div>
     );

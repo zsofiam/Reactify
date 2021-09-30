@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="961dd2de-8947-46cd-88ba-3c1cea4ebc6d" name="Changes" comment="" />
+    <list default="true" id="961dd2de-8947-46cd-88ba-3c1cea4ebc6d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reactify/ClientApp/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/Reactify/ClientApp/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reactify/ClientApp/src/components/Event/EventsList.css" beforeDir="false" afterPath="$PROJECT_DIR$/Reactify/ClientApp/src/components/Event/EventsList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reactify/ClientApp/src/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/Reactify/ClientApp/src/components/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reactify/ClientApp/src/components/footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Reactify/ClientApp/src/components/footer/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reactify/ClientApp/src/components/musicPlayer/MusicPlayer.css" beforeDir="false" afterPath="$PROJECT_DIR$/Reactify/ClientApp/src/components/musicPlayer/MusicPlayer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reactify/ClientApp/src/components/musicPlayer/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/Reactify/ClientApp/src/components/musicPlayer/Player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reactify/ClientApp/src/components/trackList/TrackList.css" beforeDir="false" afterPath="$PROJECT_DIR$/Reactify/ClientApp/src/components/trackList/TrackList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reactify/ClientApp/src/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/Reactify/ClientApp/src/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reactify/Controllers/AlbumController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Reactify/Controllers/AlbumController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reactify/Controllers/MusicPlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Reactify/Controllers/MusicPlayerController.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,6 +80,7 @@
       <workItem from="1631699773746" duration="828000" />
       <workItem from="1631802744340" duration="293000" />
       <workItem from="1631811197086" duration="8377000" />
+      <workItem from="1632993589854" duration="5379000" />
     </task>
     <servers />
   </component>
