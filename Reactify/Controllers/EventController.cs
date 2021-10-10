@@ -1,8 +1,7 @@
-﻿using System.Collections.Generic;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.AspNetCore.Mvc;
 using Reactify.Models;
 using Reactify.Services;
+using System.Collections.Generic;
 
 namespace Reactify.Controllers
 {
@@ -12,11 +11,8 @@ namespace Reactify.Controllers
     {
         private readonly JsonFileEventService _eventService;
 
-        private readonly ILogger<EventController> _logger;
-
-        public EventController(ILogger<EventController> logger, JsonFileEventService eventService)
+        public EventController(JsonFileEventService eventService)
         {
-            _logger = logger;
             _eventService = eventService;
         }
 
