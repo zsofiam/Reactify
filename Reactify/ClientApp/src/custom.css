@@ -1,14 +1,184 @@
-/* Provide sufficient contrast against white background */
+﻿/* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+    color: #0366d6;
 }
 
 code {
-  color: #E01A76;
+    color: #E01A76;
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fira Sans", sans-serif;
+}
+
+body {
+    background: url("https://images.pexels.com/photos/2224399/pexels-photo-2224399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+}
+
+/*html, body {
+    margin: 0;
+    padding: 0;
+}
+
+*/
+.background-container {
+    position: relative;
+    height: 80vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.background-container video {
+    z-index: -1;
+    opacity: 0.5;
+    position: absolute;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container-button {
+    width: 334px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    text-align: center;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background: transparent;
+}
+
+
+.one, .three {
+    border: none;
+    border-radius: 4px;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.48);
+    overflow: hidden;
+    padding: 20px 50px 20px 70px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    position: relative;
+    color: #191414;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    -webkit-transition: background-position .7s, box-shadow .4s;
+    transition: background-position .7s, box-shadow .4s;
+    background-size: 110%;
+}
+
+.one:hover,.three:hover {
+    background-position: 0% 30%;
+}
+
+    .one:hover:after, .three:hover:after {
+        right: -40px;
+        -webkit-transition: right .4s, -webkit-transform 30s .2s linear;
+        transition: right .4s, -webkit-transform 30s .2s linear;
+        transition: right .4s, transform 30s .2s linear;
+        transition: right .4s, transform 30s .2s linear, -webkit-transform 30s .2s linear;
+    }
+
+    .one:before, .one:after, .three:before, .three:after {
+        font-family: FontAwesome;
+        display: block;
+        position: absolute;
+    }
+
+    .one:before, .three:before {
+        -webkit-transition: all 1s;
+        transition: all 1s;
+        font-size: 30px;
+        left: 25px;
+        top: 19px;
+    }
+
+.one:after, .three:after {
+    -webkit-transition: right .4s, -webkit-transform .2s;
+    transition: right .4s, -webkit-transform .2s;
+    transition: right .4s, transform .2s;
+    transition: right .4s, transform .2s, -webkit-transform .2s;
+    font-size: 100px;
+    opacity: .3;
+    right: -120px;
+    top: -17px;
+}
+
+.one {
+    box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset, 0px 0px 10px 0px rgb(255,255,255);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(yellow), to(rgba(255, 255,255 0.51))), url("https://www.incimages.com/uploaded_files/image/1920x1080/getty_506068552_298876.jpg");
+    background-image: linear-gradient(to bottom, yellow, rgba(255, 255, 255, 0.51)), url("https://www.incimages.com/uploaded_files/image/1920x1080/getty_506068552_298876.jpg");
+}
+
+    .one:hover {
+        box-shadow: 0px 0px 0px 2px rgba(25, 20, 20, 0.16) inset, 0px 0px 30px 0px rebeccapurple;
+    }
+
+.one:hover:after {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.one:hover:before {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.one:after, .one:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f144";
+}
+
+    .one b {
+        color: purple;
+        font-weight: 700;
+    }
+
+.three {
+    box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset, 0px 0px 10px 0px #36C176;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#36C176), to(rgba(86, 202, 139, 0.18))), url("https://static.vecteezy.com/system/resources/thumbnails/002/437/067/small/hands-concept-of-charity-and-donation-vector.jpg");
+    background-image: linear-gradient(to bottom, #36C176, rgba(86, 202, 139, 0.18)), url("https://static.vecteezy.com/system/resources/thumbnails/002/437/067/small/hands-concept-of-charity-and-donation-vector.jpg");
+}
+
+    .three:hover {
+        box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset, 0px 0px 30px 0px #36C176;
+    }
+
+        .three:hover:after {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+
+        .three:hover:before {
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+
+    .three:after, .three:before {
+        content: "\f09d";
+    }
+
+    .three b {
+        color: blue;
+        font-weight: 700;
+    }
