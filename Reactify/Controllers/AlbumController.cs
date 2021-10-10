@@ -22,14 +22,14 @@ namespace Reactify.Controllers
 
             List<Track> tracks = new List<Track>();
 
-            return await getTracks(url, tracks);
+            return await GetTracks(url, tracks);
         }
 
-        private static async Task<List<Track>> getTracks(string url, List<Track> tracks)
+        private async Task<List<Track>> GetTracks(string url, List<Track> tracks)
         {
             using (var httpClient = new HttpClient())
             {
-                JObject albumData = await getAlbumData(url, httpClient);
+                JObject albumData = await GetAlbumData(url, httpClient);
 
                 var album = new Album
                 {
@@ -38,14 +38,14 @@ namespace Reactify.Controllers
                     Artist = (string)albumData["artist"]?["name"]
                 };
 
-                getSong(tracks, albumData);
+                GetSong(tracks, albumData);
 
                 album.Tracks = tracks;
                 return tracks;
             }
         }
 
-        private static async Task<JObject> getAlbumData(string url, HttpClient httpClient)
+        private async Task<JObject> GetAlbumData(string url, HttpClient httpClient)
         {
             httpClient.DefaultRequestHeaders.Add("User-Agent", "Anything");
             httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
@@ -58,7 +58,7 @@ namespace Reactify.Controllers
             return albumData;
         }
 
-        private static void getSong(List<Track> tracks, JObject albumData)
+        private void GetSong(List<Track> tracks, JObject albumData)
         {
             foreach (var track in albumData["tracks"]["data"])
             {
