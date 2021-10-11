@@ -6,8 +6,7 @@ import '../Support.css';
 const Support = () => {
 
     return (
-        <>
-            <div className="background-container" data-testid="background-video">
+        <div className="support-container">
                 <div id="wrapper">
                     <div id="container">
                         <div id="left-col">
@@ -27,7 +26,7 @@ const Support = () => {
                                     </div>
                                     <div class="meta-col">
                                         <h3>Zsofia Matyasi</h3>
-              
+
                                     </div>
                                 </div>
                                 <div class="item">
@@ -110,9 +109,8 @@ const Support = () => {
                         </div>
                     </div>
                 </div>
-            </div>
 
-        </>
+        </div>
     );
 
 }
