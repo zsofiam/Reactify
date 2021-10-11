@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import PlayerDetails from './PlayerDetails.js';
 import PlayerControls from './PlayerControls';
 
@@ -13,6 +13,10 @@ const Player = (props) => {
             audioEl.current.pause();
         }
     });
+
+    const LikeSong = () => {
+        console.log("likeMusic");
+    };
 
 
     const SkipSong = (forwards = true) => {
@@ -44,12 +48,17 @@ const Player = (props) => {
 
     return (
         <div className="c-player">
-            <audio src={props.songs[props.currentSongIndex].preview} ref={audioEl}/>
+            <audio src={props.songs[props.currentSongIndex].preview} ref={audioEl} />
             <h4>Playing now</h4>
-            <PlayerDetails song={props.songs[props.currentSongIndex]}/>
+            <PlayerDetails song={props.songs[props.currentSongIndex]} />
+            <div className="heart-icon">
+                <button className="like-btn" onClick={() => LikeSong()}>
+                    <i class="far fa-heart"></i>
+                </button>
+            </div>
             <PlayerControls isPlaying={isPlaying}
-                            setIsPlaying={setIsPlaying}
-                            SkipSong={SkipSong}/>
+                setIsPlaying={setIsPlaying}
+                SkipSong={SkipSong} />
             <p><strong>Next up:</strong>
                 {props.songs[props.nextSongIndex].title}
             </p>
