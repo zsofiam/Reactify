@@ -5,6 +5,7 @@ import PlayerControls from './PlayerControls';
 const Player = (props) => {
     const audioEl = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
+    const [isLikedSong, setIsLikedSong] = useState(false);
 
     useEffect(() => {
         if (isPlaying) {
@@ -16,6 +17,10 @@ const Player = (props) => {
 
     const LikeSong = () => {
         console.log("likeMusic");
+        if (isLikedSong) setIsLikedSong(false);
+        else {
+            setIsLikedSong(true);
+        }
     };
 
 
@@ -53,7 +58,7 @@ const Player = (props) => {
             <PlayerDetails song={props.songs[props.currentSongIndex]} />
             <div className="heart-icon">
                 <button className="like-btn" onClick={() => LikeSong()}>
-                    <i class="far fa-heart"></i>
+                    {isLikedSong ? <i class="fas fa-heart"></i> : <i class="far fa-heart"></i>}
                 </button>
             </div>
             <PlayerControls isPlaying={isPlaying}
