@@ -31,7 +31,7 @@ const NavBar = () => {
             <div className="topnav" id="myTopnav">
                 <a href="/" className="icon-spotify"><img src="./images/Reactify.png" alt="Reactify logo" /></a>
 
-                <button className="search-button" onClick={ goToSearchBand }>Search Artists</button>
+                <a href="javascript:void(0);" className="search-button" onClick={ goToSearchBand }>Search Artists</a>
 
                 <div className="search-container">
                     <input name="track"
@@ -43,7 +43,7 @@ const NavBar = () => {
                     <button onClick={goToTracklist}><i className="fa fa-search" /></button>
                 </div>
 
-                <button className="search-button" onClick={goToSearchEvent}>Search Events</button>
+                <a href="javascript:void(0);" className="search-button" onClick={goToSearchEvent}>Search Events</a>
 
                 <a href="javascript:void(0);" className="icon" onClick={mobileMenu}>
                     <i className="fa fa-bars" />
