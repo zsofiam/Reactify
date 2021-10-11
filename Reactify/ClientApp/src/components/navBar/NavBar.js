@@ -19,13 +19,19 @@ const NavBar = () => {
         console.log("here");
         history.push( `/track/${track}`);
     }
+    const goToSearchBand = () => {
+        history.push("/search-band");
+    }
+    const goToSearchEvent = () => {
+        history.push("/events");
+    }
 
     return (
         <>
             <div className="topnav" id="myTopnav">
                 <a href="/" className="icon-spotify"><img src="./images/Reactify.png" alt="Reactify logo" /></a>
 
-                <a href="/search-band">Search Artists</a>
+                <a href="javascript:void(0);" className="search-button" onClick={ goToSearchBand }>Search Artists</a>
 
                 <div className="search-container">
                     <input name="track"
@@ -37,7 +43,7 @@ const NavBar = () => {
                     <button onClick={goToTracklist}><i className="fa fa-search" /></button>
                 </div>
 
-                <a href="/events">Search Events</a>
+                <a href="javascript:void(0);" className="search-button" onClick={goToSearchEvent}>Search Events</a>
 
                 <a href="javascript:void(0);" className="icon" onClick={mobileMenu}>
                     <i className="fa fa-bars" />

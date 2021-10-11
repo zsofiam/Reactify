@@ -25,7 +25,6 @@ namespace Reactify.Controllers
         public void Post([FromBody] Input inputName)
         {
             if (inputName.InputName != "") BandDetailService.FetchBandDetails(inputName.InputName);
-            Redirect("search-band");
         }
     }
 }
