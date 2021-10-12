@@ -30,10 +30,10 @@ const PlayList = () => {
     return (
         <>
 
-            <div class="background-music-player">
-                { /* ide mehetne lejátszó */ }
+            <div class="background-music-player" data-testid="player">
+                { /* ide mehetne lejátszó */}
             </div>
-            <section>
+            <section data-testid="playlist">
                 <div class="album-info">
                     <div class="album-art"><img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80" />
                         <div class="actions">
