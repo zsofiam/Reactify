@@ -24,8 +24,6 @@
     <ItemGroup>
         <Folder Include="ClientApp\public\images\" />
         <Folder Include="ClientApp\src\Pages\" />
-        <Folder Include="Services\" />
-        <Folder Include="Services\" />
 
     </ItemGroup>
 
