@@ -15,6 +15,12 @@ namespace Reactify.Controllers
             return Ok();
         }
 
+        [HttpPost("login")]
+        public async Task<OkResult> Login()
+        {
+            
+            return Ok();
+        }
 
     }
 }
