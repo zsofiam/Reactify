@@ -7,6 +7,7 @@ import Footer from './components/footer/Footer.js';
 import BandDetail from './components/bandDetail/BandDetail';
 import EventsList from './components/Event/EventsList';
 import Support from './components/Support';
+import Playlist from './components/playList/PlayList';
 
 import './custom.css'
 import TrackList from "./components/trackList/TrackList";
@@ -18,6 +19,9 @@ function App() {
             <Switch>
                 <Route path="/" exact>
                     <Home />
+                </Route>
+                <Route path="/play-list" exact>
+                    <Playlist />
                 </Route>
 
                 <Route path="/player" exact>
