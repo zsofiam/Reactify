@@ -17,7 +17,7 @@ const Footer = () => {
                                 rel="noreferrer"
                             > <i class="fas fa-headset"></i>
 
-</a>
+                            </a>
                         </ul>
                     </div>
                     <div className="col social">

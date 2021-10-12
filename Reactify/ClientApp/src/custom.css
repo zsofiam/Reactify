@@ -87,31 +87,31 @@ body {
     background-size: 110%;
 }
 
-.one:hover,.three:hover {
+.one:hover, .three:hover {
     background-position: 0% 30%;
 }
 
-    .one:hover:after, .three:hover:after {
-        right: -40px;
-        -webkit-transition: right .4s, -webkit-transform 30s .2s linear;
-        transition: right .4s, -webkit-transform 30s .2s linear;
-        transition: right .4s, transform 30s .2s linear;
-        transition: right .4s, transform 30s .2s linear, -webkit-transform 30s .2s linear;
-    }
+.one:hover:after, .three:hover:after {
+    right: -40px;
+    -webkit-transition: right .4s, -webkit-transform 30s .2s linear;
+    transition: right .4s, -webkit-transform 30s .2s linear;
+    transition: right .4s, transform 30s .2s linear;
+    transition: right .4s, transform 30s .2s linear, -webkit-transform 30s .2s linear;
+}
 
-    .one:before, .one:after, .three:before, .three:after {
-        font-family: FontAwesome;
-        display: block;
-        position: absolute;
-    }
+.one:before, .one:after, .three:before, .three:after {
+    font-family: FontAwesome;
+    display: block;
+    position: absolute;
+}
 
-    .one:before, .three:before {
-        -webkit-transition: all 1s;
-        transition: all 1s;
-        font-size: 30px;
-        left: 25px;
-        top: 19px;
-    }
+.one:before, .three:before {
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    font-size: 30px;
+    left: 25px;
+    top: 19px;
+}
 
 .one:after, .three:after {
     -webkit-transition: right .4s, -webkit-transform .2s;
@@ -125,14 +125,14 @@ body {
 }
 
 .one {
-    box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset, 0px 0px 10px 0px rgb(255,255,255);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(yellow), to(rgba(255, 255,255 0.51))), url("https://www.incimages.com/uploaded_files/image/1920x1080/getty_506068552_298876.jpg");
+    box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset, 0px 0px 10px 0px rgb(255, 255, 255);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(yellow), to(rgba(255, 255, 255 0.51))), url("https://www.incimages.com/uploaded_files/image/1920x1080/getty_506068552_298876.jpg");
     background-image: linear-gradient(to bottom, yellow, rgba(255, 255, 255, 0.51)), url("https://www.incimages.com/uploaded_files/image/1920x1080/getty_506068552_298876.jpg");
 }
 
-    .one:hover {
-        box-shadow: 0px 0px 0px 2px rgba(25, 20, 20, 0.16) inset, 0px 0px 30px 0px rebeccapurple;
-    }
+.one:hover {
+    box-shadow: 0px 0px 0px 2px rgba(25, 20, 20, 0.16) inset, 0px 0px 30px 0px rebeccapurple;
+}
 
 .one:hover:after {
     -webkit-transform: scale(1);
@@ -149,10 +149,10 @@ body {
     content: "\f144";
 }
 
-    .one b {
-        color: purple;
-        font-weight: 700;
-    }
+.one b {
+    color: purple;
+    font-weight: 700;
+}
 
 .three {
     box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset, 0px 0px 10px 0px #36C176;
@@ -160,25 +160,25 @@ body {
     background-image: linear-gradient(to bottom, #36C176, rgba(86, 202, 139, 0.18)), url("https://static.vecteezy.com/system/resources/thumbnails/002/437/067/small/hands-concept-of-charity-and-donation-vector.jpg");
 }
 
-    .three:hover {
-        box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset, 0px 0px 30px 0px #36C176;
-    }
+.three:hover {
+    box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset, 0px 0px 30px 0px #36C176;
+}
 
-        .three:hover:after {
-            -webkit-transform: scale(1);
-            transform: scale(1);
-        }
+.three:hover:after {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
 
-        .three:hover:before {
-            -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-        }
+.three:hover:before {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
 
-    .three:after, .three:before {
-        content: "\f09d";
-    }
+.three:after, .three:before {
+    content: "\f09d";
+}
 
-    .three b {
-        color: blue;
-        font-weight: 700;
-    }
+.three b {
+    color: blue;
+    font-weight: 700;
+}

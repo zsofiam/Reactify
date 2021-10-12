@@ -1,8 +1,8 @@
 import axios from "axios";
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import './MusicPlayer.css';
 import Player from './Player.js';
-import { useLocation } from "react-router-dom";
+import {useLocation} from "react-router-dom";
 
 const MusicPlayer = (detail) => {
     const [songs, setSongs] = useState({});
@@ -15,8 +15,8 @@ const MusicPlayer = (detail) => {
     useEffect(() => {
         console.log(location.state.detail)
         axios
-            //.get(`player?albumId=${location.state.detail}`)
-            .get(`player`)
+            .get(`player?albumId=${location.state.detail}`)
+            //.get(`player`)
             .then(
                 res => {
                     setSongs(res.data);
@@ -47,7 +47,7 @@ const MusicPlayer = (detail) => {
                 :
                 <div>:(</div>
             }
-        </div >
+        </div>
     );
 }
 

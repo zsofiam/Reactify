@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
 using Reactify.Models;
 using Reactify.Services;
-using System.Collections.Generic;
 
 namespace Reactify.Controllers
 {

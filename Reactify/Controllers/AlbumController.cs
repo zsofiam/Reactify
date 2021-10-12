@@ -1,11 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json.Linq;
 using Reactify.Models;
 using Reactify.Services;
 using System;
 using System.Collections.Generic;
-using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
 namespace Reactify.Controllers
@@ -28,6 +25,39 @@ namespace Reactify.Controllers
         }
 
 
-       
+        private int GetAlbumIdByDate()
+        {
+            DateTime localDate = DateTime.Now;
+            int month = localDate.Month;
+            int day = localDate.Day;
+            int albumId;
+            
+
+            if (month >= 1 && month < 4)
+            {
+                albumId = (int)AlbumIds.Valentinesday;
+            }
+            else if (month >= 4 && month < 9)
+            {
+                albumId = (int)AlbumIds.Easter;
+            }
+            else if (month >= 9 && month < 11)
+            {
+                albumId = (int)AlbumIds.Halloween;
+            }
+            else
+            {
+                albumId = (int)AlbumIds.Christmas;
+            }
+            return albumId;
+        }
+
+        internal enum AlbumIds : int
+        {
+            Halloween = 257819812,
+            Christmas = 7049462,
+            Valentinesday = 14663594,
+            Easter = 13048098
+        }
     }
 }

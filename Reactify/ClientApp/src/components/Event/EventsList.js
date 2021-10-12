@@ -16,16 +16,16 @@ const EventsList = () => {
     }, []);
 
     return (
-<div className="events-div">
-                <ul className="card-wrapper">
-                    {events.map(event =>
-                        <Event
-                            key={event.Id}
-                            event={event}
-                        />
-                    )}
-                </ul>
-</div>
+        <div className="events-div">
+            <ul className="card-wrapper">
+                {events.map(event =>
+                    <Event
+                        key={event.Id}
+                        event={event}
+                    />
+                )}
+            </ul>
+        </div>
 
     );
 
