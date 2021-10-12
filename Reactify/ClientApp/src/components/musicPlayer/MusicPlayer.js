@@ -15,8 +15,8 @@ const MusicPlayer = (detail) => {
     useEffect(() => {
         console.log(location.state.detail)
         axios
-            //.get(`player?albumId=${location.state.detail}`)
-            .get(`player`)
+            .get(`player?albumId=${location.state.detail}`)
+            //.get(`player`)
             .then(
                 res => {
                     setSongs(res.data);
