@@ -11,6 +11,8 @@ import Playlist from './components/playList/PlayList';
 
 import './custom.css'
 import TrackList from "./components/trackList/TrackList";
+import {Login} from "./components/authorization/Login";
+import {Register} from "./components/authorization/Register";
 
 function App() {
     return (
@@ -20,7 +22,7 @@ function App() {
                 <Route path="/" exact>
                     <Home/>
                 </Route>
-                <Route path="/play-list" exact>
+                <Route path="/playlist" exact>
                     <Playlist />
                 </Route>
 
@@ -34,6 +36,15 @@ function App() {
                 <Route path="/events" exact>
                     <EventsList/>
                 </Route>
+                
+                <Route>
+                    <Register path="/authentication/register" exact />
+                </Route>
+                
+                <Route>
+                    <Login path="/authentication/login" exact />
+                </Route>
+                
                 <Route path='/support' exact>
                     <Support/>
                 </Route>

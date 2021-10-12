@@ -27,6 +27,14 @@ const NavBar = () => {
         history.push("/events");
     }
 
+    const goToRegister = () => {
+        history.push("/authentication/register");
+    }
+
+    const goToLogin = () => {
+        history.push("/authentication/login");
+    }
+
     return (
         <>
             <div className="topnav" id="myTopnav">
@@ -46,7 +54,9 @@ const NavBar = () => {
 
                 <a href="javascript:void(0);" className="search-button" onClick={goToSearchEvent}>Search Events</a>
 
-                <LoginMenu />
+                <a href="javascript:void(0);" className="search-button" onClick={goToRegister}>Register</a>
+                <a href="javascript:void(0);" className="search-button" onClick={goToLogin}>Login</a>
+                
                 
                 <a href="javascript:void(0);" className="icon" onClick={mobileMenu}>
                     <i className="fa fa-bars"/>
