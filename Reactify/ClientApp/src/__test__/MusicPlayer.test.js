@@ -1,7 +1,6 @@
 ﻿import React from "react";
-import {cleanup, render} from '@testing-library/react';
 import MusicPlayer from "../components/musicPlayer/MusicPlayer";
-import "@testing-library/jest-dom/extend-expect";
+import {render, cleanup} from "@testing-library/react";
 
 beforeAll(() =>
     Object.defineProperty(HTMLMediaElement.prototype, "muted", {
@@ -10,7 +9,7 @@ beforeAll(() =>
 );
 
 test('home page icons and bg reders without crashing', () => {
-    const {getByTestId} = render(<MusicPlayer/>);
+    const { getByTestId } = render(<MusicPlayer />);
     const background = getByTestId('music-player');
 
     expect(background).toBeTruthy();

@@ -1,7 +1,7 @@
 ﻿import React from "react";
 import {cleanup, render} from '@testing-library/react';
 import Home from "../components/Home";
-import "@testing-library/jest-dom/extend-expect";
+
 
 beforeAll(() =>
     Object.defineProperty(HTMLMediaElement.prototype, "muted", {
