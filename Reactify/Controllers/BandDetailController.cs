@@ -13,7 +13,7 @@ namespace Reactify.Controllers
             BandDetailService = bandDetailService;
         }
 
-        public BandDetailService BandDetailService { get; set; }
+        public BandDetailService BandDetailService { get; }
 
         [HttpGet]
         public Band Get()
