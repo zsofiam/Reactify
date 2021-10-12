@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31605.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reactify", "Reactify\Reactify.csproj", "{87B59A30-CC65-45B0-B858-A842D4CC6EB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reactify", "Reactify\Reactify.csproj", "{87B59A30-CC65-45B0-B858-A842D4CC6EB3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reactify.Tests", "Reactify.Tests\Reactify.Tests.csproj", "{14DA2FF0-FB4D-4AFC-83B0-90DC78217135}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{87B59A30-CC65-45B0-B858-A842D4CC6EB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87B59A30-CC65-45B0-B858-A842D4CC6EB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87B59A30-CC65-45B0-B858-A842D4CC6EB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14DA2FF0-FB4D-4AFC-83B0-90DC78217135}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14DA2FF0-FB4D-4AFC-83B0-90DC78217135}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14DA2FF0-FB4D-4AFC-83B0-90DC78217135}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14DA2FF0-FB4D-4AFC-83B0-90DC78217135}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
