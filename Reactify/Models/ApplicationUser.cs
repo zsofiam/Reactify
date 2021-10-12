@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace CheckLogin.Models
+namespace Reactify.Models
 {
     public class ApplicationUser : IdentityUser
     {
-        public string Playlist { get; set; }
+        public string Placeholder { get; set; }
     }
 }

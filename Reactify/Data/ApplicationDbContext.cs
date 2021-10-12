@@ -1,5 +1,4 @@
-﻿using CheckLogin.Models;
-using Reactify.Models;
+﻿using Reactify.Models;
 using IdentityServer4.EntityFramework.Options;
 using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
 using Microsoft.EntityFrameworkCore;
