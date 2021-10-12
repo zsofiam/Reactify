@@ -1,6 +1,6 @@
 ﻿
 .card {
-    --card-gradient:rgba(0, 0, 0, 0.9), #e271ad;
+    --card-gradient: rgba(0, 0, 0, 0.9), #e271ad;
     --card-blend-mode: overlay;
     background-color: #fff;
     border-radius: 0.5rem;
@@ -9,6 +9,7 @@
     background-image: linear-gradient(var(--card-gradient), white max(9.5rem, 27vh));
     overflow: hidden;
 }
+
 .card img {
     border-radius: 0.5rem 0.5rem 0 0;
     width: 100%;
@@ -18,13 +19,16 @@
     aspect-ratio: 4/3;
     mix-blend-mode: var(--card-blend-mode);
 }
+
 .card img ~ * {
     margin-left: 1rem;
     margin-right: 1rem;
 }
+
 .card > :last-child {
     margin-bottom: 0;
 }
+
 .card:hover, .card:focus-within {
     --card-gradient: rebeccapurple max(9.0rem, 20vh);
 }
@@ -39,8 +43,8 @@
     line-height: 1.5;
     font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
     color: #444;
-/*    background-image: url("https://cdn.pixabay.com/photo/2016/11/22/19/15/hand-1850120_960_720.jpg");
-*/
+    /*    background-image: url("https://cdn.pixabay.com/photo/2016/11/22/19/15/hand-1850120_960_720.jpg");
+    */
 }
 
 .card h3 {
@@ -79,7 +83,8 @@
     cursor: pointer;
     margin: 5px;
 }
-.events-button a:hover{
+
+.events-button a:hover {
     text-decoration: none;
 }
 

@@ -1,5 +1,5 @@
 ﻿import React from "react";
-import { render, cleanup } from '@testing-library/react';
+import {cleanup, render} from '@testing-library/react';
 import Home from "../components/Home";
 import "@testing-library/jest-dom/extend-expect";
 
@@ -10,7 +10,7 @@ beforeAll(() =>
 );
 
 test('home page icons and bg reders without crashing', () => {
-    const { getByTestId } = render(<Home />);
+    const {getByTestId} = render(<Home/>);
     const background = getByTestId('background-video');
 
     expect(background).toBeTruthy();
@@ -18,7 +18,7 @@ test('home page icons and bg reders without crashing', () => {
 
 
 test('home page icons and bg reders without crashing', () => {
-    const { getByTestId } = render(<Home />);
+    const {getByTestId} = render(<Home/>);
     const background = getByTestId('play-music-button');
     expect(background).toBeTruthy();
 })

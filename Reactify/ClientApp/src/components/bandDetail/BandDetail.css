@@ -33,11 +33,12 @@
         background-position: 100% 50%;
     }
 }
-    .band-banner {
-        display: flex;
-        padding: 1rem 0;
-        justify-content: center;
-    }
+
+.band-banner {
+    display: flex;
+    padding: 1rem 0;
+    justify-content: center;
+}
 
 .band-banner img {
     width: 100%;
@@ -58,7 +59,7 @@
 .band-empty {
     margin-top: 1.25rem;
     text-align: center;
-    color:white;
+    color: white;
 }
 
 .search-band {
