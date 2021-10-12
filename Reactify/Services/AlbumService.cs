@@ -73,7 +73,7 @@ namespace Reactify.Services
             }
         }
 
-        public int GetAlbumIdByDate()
+        private int GetAlbumIdByDate()
         {
             DateTime localDate = DateTime.Now;
             int month = localDate.Month;
@@ -100,7 +100,7 @@ namespace Reactify.Services
             return albumId;
         }
 
-        internal enum AlbumIds : int
+        private enum AlbumIds : int
         {
             Halloween = 257819812,
             Christmas = 7049462,
