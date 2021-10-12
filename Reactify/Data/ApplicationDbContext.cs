@@ -1,12 +1,12 @@
-﻿using Reactify.Models;
-using IdentityServer4.EntityFramework.Options;
+﻿using IdentityServer4.EntityFramework.Options;
 using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using Reactify.Models;
 
 namespace Reactify.Data
 {
-    public class ApplicationDbContext : ApiAuthorizationDbContext<ApplicationUser>  // this was ApiAuthorizationDbContext
+    public class ApplicationDbContext : ApiAuthorizationDbContext<ApplicationUser> // this was ApiAuthorizationDbContext
     {
         public ApplicationDbContext(
             DbContextOptions options,
@@ -18,6 +18,5 @@ namespace Reactify.Data
         //{
         //    base.OnModelCreating(builder);
         //}
-
     }
 }

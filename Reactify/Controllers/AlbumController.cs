@@ -1,11 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json.Linq;
-using Reactify.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Linq;
+using Reactify.Models;
 
 namespace Reactify.Controllers
 {
@@ -13,16 +13,13 @@ namespace Reactify.Controllers
     [Route("player")]
     public class AlbumController : ControllerBase
     {
-
         [HttpGet]
         public async Task<List<Track>> GetResultTracks([FromQuery] string albumId)
         {
-            if (albumId == "" || albumId is null) { 
-            albumId = GetAlbumIdByDate().ToString();
-            }
-            string url = "https://api.deezer.com/album/" + albumId.Trim().Replace(" ", "_");
+            if (albumId == "" || albumId is null) albumId = GetAlbumIdByDate().ToString();
+            var url = "https://api.deezer.com/album/" + albumId.Trim().Replace(" ", "_");
 
-            List<Track> tracks = new List<Track>();
+            var tracks = new List<Track>();
 
             return await GetTracks(url, tracks);
         }
@@ -32,13 +29,13 @@ namespace Reactify.Controllers
         {
             using (var httpClient = new HttpClient())
             {
-                JObject albumData = await GetAlbumData(url, httpClient);
+                var albumData = await GetAlbumData(url, httpClient);
 
                 var album = new Album
                 {
-                    Title = (string)albumData["title"],
-                    Cover = (string)albumData["cover_xl"],
-                    Artist = (string)albumData["artist"]?["name"]
+                    Title = (string) albumData["title"],
+                    Cover = (string) albumData["cover_xl"],
+                    Artist = (string) albumData["artist"]?["name"]
                 };
 
                 GetSong(tracks, albumData);
@@ -67,11 +64,11 @@ namespace Reactify.Controllers
             {
                 var song = new Track
                 {
-                    Preview = (string)track["preview"],
-                    Title = (string)track["title"],
-                    Image = (string)albumData["cover_xl"],
-                    ArtistName = (string)albumData["artist"]?["name"],
-                    Id = (string)track["id"]
+                    Preview = (string) track["preview"],
+                    Title = (string) track["title"],
+                    Image = (string) albumData["cover_xl"],
+                    ArtistName = (string) albumData["artist"]?["name"],
+                    Id = (string) track["id"]
                 };
 
                 tracks.Add(song);
@@ -81,32 +78,24 @@ namespace Reactify.Controllers
 
         private int GetAlbumIdByDate()
         {
-            DateTime localDate = DateTime.Now;
-            int month = localDate.Month;
-            int day = localDate.Day;
+            var localDate = DateTime.Now;
+            var month = localDate.Month;
+            var day = localDate.Day;
             int albumId;
-            
+
 
             if (month >= 1 && month < 4)
-            {
-                albumId = (int)AlbumIds.Valentinesday;
-            }
+                albumId = (int) AlbumIds.Valentinesday;
             else if (month >= 4 && month < 9)
-            {
-                albumId = (int)AlbumIds.Easter;
-            }
+                albumId = (int) AlbumIds.Easter;
             else if (month >= 9 && month < 11)
-            {
-                albumId = (int)AlbumIds.Halloween;
-            }
+                albumId = (int) AlbumIds.Halloween;
             else
-            {
-                albumId = (int)AlbumIds.Christmas;
-            }
+                albumId = (int) AlbumIds.Christmas;
             return albumId;
         }
 
-        internal enum AlbumIds : int
+        internal enum AlbumIds
         {
             Halloween = 257819812,
             Christmas = 7049462,

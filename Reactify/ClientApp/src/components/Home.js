@@ -1,6 +1,6 @@
 import React from 'react';
 import '../custom.css';
-import { useHistory } from "react-router-dom";
+import {useHistory} from "react-router-dom";
 
 
 const Home = () => {
@@ -12,7 +12,7 @@ const Home = () => {
     const history = useHistory();
     const getSupriseMusic = () => history.push({
         pathname: "/player",
-        state: { detail: albumId }
+        state: {detail: albumId}
     });
 
 
@@ -25,8 +25,12 @@ const Home = () => {
             <div className="background-container" data-testid="background-video">
             </div>
             <div className='container-button'>
-                <button data-testid="play-music-button" onClick={getSupriseMusic} className='one'>Play some <b>amazing</b> music!</button>
-                <button data-testid="play-music-button" onClick={getDonation} className='three'>Support <b>Reactify's</b> developers!</button>
+                <button data-testid="play-music-button" onClick={getSupriseMusic} className='one'>Play
+                    some <b>amazing</b> music!
+                </button>
+                <button data-testid="play-music-button" onClick={getDonation}
+                        className='three'>Support <b>Reactify's</b> developers!
+                </button>
 
             </div>
         </>
