@@ -1,4 +1,4 @@
-export const ApplicationName = 'CheckLogin';
+export const ApplicationName = 'Reactify';
 
 export const QueryParameterNames = {
   ReturnUrl: 'returnUrl',

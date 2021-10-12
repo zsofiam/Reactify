@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './NavBar.css';
 import {useHistory} from 'react-router-dom';
+import {LoginMenu} from "../api-authorization/LoginMenu";
 
 const NavBar = () => {
     const mobileMenu = () => {
@@ -45,6 +46,8 @@ const NavBar = () => {
 
                 <a href="javascript:void(0);" className="search-button" onClick={goToSearchEvent}>Search Events</a>
 
+                <LoginMenu />
+                
                 <a href="javascript:void(0);" className="icon" onClick={mobileMenu}>
                     <i className="fa fa-bars"/>
                 </a>
