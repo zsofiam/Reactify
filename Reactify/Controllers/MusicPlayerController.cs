@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Reactify.Models;
 using Reactify.Services;
 using System.Collections.Generic;
