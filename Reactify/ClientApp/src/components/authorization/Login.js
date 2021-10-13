@@ -36,7 +36,7 @@ export const Login = () => {
                 if (response.data != null) {
                     user.userLoggedIn();
                     setIsLoginSuccessfull(true);
-                    sessionStorage.setItem("userId", response.id);
+                    sessionStorage.setItem("userId", response.data);
 
                 }
                 else { setIsLoginSuccessfull(false); }
