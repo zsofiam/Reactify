@@ -21,6 +21,8 @@ namespace Reactify.Services
 
             _dbContext.Database.EnsureCreated();
             _dbContext.Add(newUser);
+            //_dbContext.SaveChanges();
+            _dbContext.Add(new Account { User = newUser, Tracks = new List<Track>()});
             _dbContext.SaveChanges();
         }
     }
