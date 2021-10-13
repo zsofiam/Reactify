@@ -6,7 +6,7 @@ using Reactify.Models;
 
 namespace Reactify.Data
 {
-    public class ApplicationDbContext : DbContext // this was ApiAuthorizationDbContext
+    public class ApplicationDbContext : DbContext
     {
 
         public DbSet<User> Users { get; set; }
