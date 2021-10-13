@@ -15,10 +15,10 @@ export const Register = () => {
                     <input type="text" placeholder="Enter Email" name="email" id="email" required/>
 
                     <label htmlFor="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" id="psw" required/>
+                    <input type="password" placeholder="Enter Password" name="password" id="psw" required/>
 
                     <label htmlFor="psw-repeat"><b>Repeat Password</b></label>
-                    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat"
+                    <input type="password" placeholder="Repeat Password" name="password2" id="psw-repeat"
                            required/>
 
 

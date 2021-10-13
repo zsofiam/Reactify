@@ -10,14 +10,20 @@ namespace Reactify.Controllers
     [Route("authorization")]
     public class AuthorizationController : ControllerBase
     {
-        private AuthorizationService service = new AuthorizationService(); // clean megoldást keresni 
+        private IAuthorizationService service;
 
+        public AuthorizationController(IAuthorizationService service)
+        {
+            this.service = service;
+        }
 
         [HttpPost("register")]
-        public async Task<OkResult> RegisterAccount([FromBody] ApplicationUser newUser)
+        public async Task<OkResult> RegisterAccount([FromForm] UserModell newUser)
         {
 
-            service.SaveNewUser(newUser);
+            User user = new User { Email = newUser.Email, Password = newUser.Password };
+
+            service.SaveNewUser(user);
             return Ok();
         }
 

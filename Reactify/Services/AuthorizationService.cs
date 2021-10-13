@@ -7,15 +7,21 @@ using System.Threading.Tasks;
 
 namespace Reactify.Services
 {
-    public class AuthorizationService
+    public class AuthorizationService : IAuthorizationService
     {
-        //private ApplicationDbContext _dbContext = new ApplicationDbContext();
-        public void SaveNewUser(ApplicationUser newUser)
+        private ApplicationDbContext _dbContext;
+
+        public AuthorizationService()
+        {
+            _dbContext = new ApplicationDbContext();
+        }
+
+        public void SaveNewUser(User newUser)
         {
 
-            //    _dbContext.Database.EnsureCreated();
-            //    _dbContext.Add(newUser);
-            //    _dbContext.SaveChanges();
+            _dbContext.Database.EnsureCreated();
+            _dbContext.Add(newUser);
+            _dbContext.SaveChanges();
         }
     }
 }

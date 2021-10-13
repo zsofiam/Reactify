@@ -6,16 +6,10 @@ using Reactify.Models;
 
 namespace Reactify.Data
 {
-    public class ApplicationDbContext : ApiAuthorizationDbContext<ApplicationUser> // this was ApiAuthorizationDbContext
+    public class ApplicationDbContext : DbContext // this was ApiAuthorizationDbContext
     {
 
-        public ApplicationDbContext(
-            DbContextOptions options,
-            IOptions<OperationalStoreOptions> operationalStoreOptions) : base(options, operationalStoreOptions)
-        {
-        }
-
-        public DbSet<ApplicationUser> Users { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
