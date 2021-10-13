@@ -1,13 +1,9 @@
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Reactify.Data;
-using Reactify.Models;
 using Reactify.Services;
 
 namespace Reactify
@@ -29,6 +25,9 @@ namespace Reactify
             services.AddControllersWithViews();
             services.AddSingleton<BandDetailService>();
             services.AddSingleton<IAuthorizationService, AuthorizationService>();
+
+            services.AddSingleton<IAccountService, AccountService>();
+
             services.AddTransient<JsonFileEventService>();
             services.AddTransient<MusicPlayerService>();
             services.AddTransient<AlbumService>();

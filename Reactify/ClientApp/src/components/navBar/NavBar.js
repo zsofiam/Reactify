@@ -36,6 +36,10 @@ const NavBar = () => {
         history.push("/register");
     }
 
+    const goToPlaylist = () => {
+        history.push("/playlist");
+    }
+
     const goToLogin = () => {
         history.push("/login");
     }
@@ -67,7 +71,10 @@ const NavBar = () => {
 
                 <a href="javascript:void(0);" className="search-button" onClick={goToSearchEvent}>Search Events</a>
                 {user.isLogged ?
-                    <a href="javascript:void(0);" className="search-button" onClick={logOut}>Logout</a>
+                    <>
+                        <a href="javascript:void(0);" className="search-button" onClick={goToPlaylist}>PlayList</a>
+                        <a href="javascript:void(0);" className="search-button" onClick={logOut}>Logout</a>
+                    </>
                     :
                     <>
                         <a href="javascript:void(0);" className="search-button" onClick={goToLogin}>Login</a>
