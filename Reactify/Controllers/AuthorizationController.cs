@@ -28,10 +28,9 @@ namespace Reactify.Controllers
         }
 
         [HttpPost("login")]
-        public async Task<OkResult> Login()
+        public async Task<int> Login([FromHeader] User user)
         {
-
-            return Ok();
+            return service.Login(user);
         }
 
     }

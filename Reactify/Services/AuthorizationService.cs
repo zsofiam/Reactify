@@ -21,5 +21,13 @@ namespace Reactify.Services
             _dbContext.Add(new Account { User = newUser, Tracks = new List<Track>()});
             _dbContext.SaveChanges();
         }
+
+
+        public int Login(User user)
+        {
+            var loginUser = _dbContext.Users
+                .Where(x => x.Email == user.Email && x.Password == user.Password);
+            return loginUser.FirstOrDefault().Id;
+        }
     }
 }
