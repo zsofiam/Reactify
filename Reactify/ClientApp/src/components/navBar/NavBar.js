@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import './NavBar.css';
 import {useHistory} from 'react-router-dom';
-import {LoginMenu} from "../api-authorization/LoginMenu";
 
 const NavBar = () => {
     const mobileMenu = () => {
@@ -28,11 +27,11 @@ const NavBar = () => {
     }
 
     const goToRegister = () => {
-        history.push("/authentication/register");
+        history.push("/register");
     }
 
     const goToLogin = () => {
-        history.push("/authentication/login");
+        history.push("/login");
     }
 
     return (

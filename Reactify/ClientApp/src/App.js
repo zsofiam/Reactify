@@ -11,8 +11,8 @@ import Playlist from './components/playList/PlayList';
 
 import './custom.css'
 import TrackList from "./components/trackList/TrackList";
-import {Login} from "./components/authorization/Login";
-import {Register} from "./components/authorization/Register";
+import Login from "./components/authorization/Login";
+import Register from "./components/authorization/Register";
 
 function App() {
     return (
@@ -37,12 +37,12 @@ function App() {
                     <EventsList/>
                 </Route>
                 
-                <Route>
-                    <Register path="/authentication/register" exact />
+                <Route path="/register" exact >
+                    <Register />
                 </Route>
                 
-                <Route>
-                    <Login path="/authentication/login" exact />
+                <Route path="/login" exact >
+                    <Login />
                 </Route>
                 
                 <Route path='/support' exact>
