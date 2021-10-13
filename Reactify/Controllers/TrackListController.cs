@@ -21,12 +21,14 @@ namespace Reactify.Controllers
         [HttpPost]
         public void SaveTrack([FromBody] Track track)
         {
-            Console.WriteLine(track.Id);
-            Console.WriteLine(track.Title);
-            Console.WriteLine(track.Album);
+            Account retrievedAccount = _trackListService.RetrieveAccountFromDb(1);
+            if (retrievedAccount.Tracks == null)
+            {
+                retrievedAccount.Tracks = new List<Track>();
+            }
+            _trackListService.SaveTrackToTracklist(retrievedAccount, track);
+            
 
-            Account account = _trackListService.RetrieveAccountFromDb(1);
-            Console.WriteLine(account.Id);
         }
             
 

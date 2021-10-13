@@ -15,17 +15,16 @@ namespace Reactify.Services
         {
             _dbContext = new ApplicationDbContext();
         }
-        public void DeleteTrackFromTracklist(Track track)
-        {
-            throw new NotImplementedException();
-        }
-
         public Account RetrieveAccountFromDb(int accountId)
         {
             return _dbContext.Accounts.Where(account => account.Id == accountId).FirstOrDefault();
         }
-
-        public void SaveTrackToTracklist(Track track)
+        public void SaveTrackToTracklist(Account account, Track track)
+        {
+            account.Tracks.Add(track);
+            _dbContext.SaveChanges();
+        }
+        public void DeleteTrackFromTracklist(Account account, Track track)
         {
             throw new NotImplementedException();
         }

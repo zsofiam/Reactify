@@ -5,7 +5,7 @@ namespace Reactify.Services
     public interface ITrackListService
     {
         Account RetrieveAccountFromDb(int accountId);
-        void SaveTrackToTracklist(Track track);
-        void DeleteTrackFromTracklist(Track track);
+        void SaveTrackToTracklist(Account account, Track track);
+        void DeleteTrackFromTracklist(Account account, Track track);
     }
 }
