@@ -1,7 +1,9 @@
-import axios from 'axios';
-import React, { useState, useEffect } from 'react';
+import React, { useContext, useState } from 'react';
+import { UserContext } from "../../context/user";
 
 export const Login = () => {
+
+    const user = useContext(UserContext);
 
     const [isLoginSuccessfull, setIsLoginSuccessfull] = useState(false);
     const [email, setEmail] = useState('Email');
@@ -30,7 +32,7 @@ export const Login = () => {
         axios
             .request(options)
             .then(function (response) {
-                if (response.status === 200) setIsLoginSuccessfull(true);
+                if (response.status === 200) user.userLoggedIn();
                 else { setIsLoginSuccessfull(false); }
 
             })
@@ -52,10 +54,12 @@ export const Login = () => {
                         <p>Please fill in this form to log in.</p>
 
                         <label htmlFor="email"><b>Email</b></label>
-                        <input type="text" placeholder="Enter Email" name="email" id="email" required value={email} onChange={firstInputArea} />
+                        <input type="text" placeholder="Enter Email"
+                            name="email" id="email" required value={email} onChange={firstInputArea} />
 
                         <label htmlFor="psw"><b>Password</b></label>
-                        <input type="password" placeholder="Enter Password" name="password" id="psw" required value={password} onChange={secondInputArea} />
+                        <input type="password" placeholder="Enter Password"
+                            name="password" id="psw" required value={password} onChange={secondInputArea} />
 
                         <button type="submit" className="registerbtn">Login</button>
                     </div>
