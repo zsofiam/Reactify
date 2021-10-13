@@ -23,5 +23,13 @@ namespace Reactify.Services
             _dbContext.Add(newUser);
             _dbContext.SaveChanges();
         }
+
+
+        public void Login(User user)
+        {
+            var loginUser = _dbContext.Users
+                .Where(x => string.Equals(x.Email, user.Email) && string.Equals(x.Password, user.Password));
+
+        }
     }
 }
