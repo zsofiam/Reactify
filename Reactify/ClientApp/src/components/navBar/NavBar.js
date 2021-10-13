@@ -40,6 +40,13 @@ const NavBar = () => {
         history.push("/login");
     }
 
+    const logOut = () => {
+        user.userLoggedOut();
+        history.push("/");
+        alert("You are logged in");
+
+    }
+
     return (
         <>
             <div className="topnav" id="myTopnav">
@@ -58,13 +65,14 @@ const NavBar = () => {
                 </div>
 
                 <a href="javascript:void(0);" className="search-button" onClick={goToSearchEvent}>Search Events</a>
-
-                <a href="javascript:void(0);" className="search-button" onClick={goToRegister}>Register</a>
-
                 {user.isLogged ?
-                    <a href="javascript:void(0);" className="search-button" onClick={goToLogin}>Logout</a>
+                    <a href="javascript:void(0);" className="search-button" onClick={logOut}>Logout</a>
                     :
-                    <a href="javascript:void(0);" className="search-button" onClick={goToLogin}>Login</a>
+                    <>
+                        <a href="javascript:void(0);" className="search-button" onClick={goToLogin}>Login</a>
+                        <a href="javascript:void(0);" className="search-button" onClick={goToRegister}>Register</a>
+                    </>
+
                 }
 
 

@@ -32,7 +32,10 @@ export const Login = () => {
         axios
             .request(options)
             .then(function (response) {
-                if (response.status === 200) user.userLoggedIn();
+                if (response.status === 200) {
+                    user.userLoggedIn();
+                    setIsLoginSuccessfull(true);
+                }
                 else { setIsLoginSuccessfull(false); }
 
             })
