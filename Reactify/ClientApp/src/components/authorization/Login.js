@@ -2,9 +2,9 @@ import React, {useState} from 'react';
 
 export const Login = () => {
     return (
-        <div>
+        <div className="registration-container">
             <form action="/authorization/login" method="POST">
-                <div className="container">
+                <div>
                     <h1>Login</h1>
                     <p>Please fill in this form to log in.</p>
 

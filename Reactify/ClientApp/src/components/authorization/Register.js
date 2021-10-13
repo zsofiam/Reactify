@@ -5,9 +5,9 @@ import './Register.css';
 export const Register = () => {
 
     return (
-        <div>
+        <div className="registration-container">
             <form action="/authorization/register" method="POST">
-                <div className="container">
+                <div>
                     <h1>Register</h1>
                     <p>Please fill in this form to create an account.</p>
 
@@ -26,7 +26,7 @@ export const Register = () => {
                     <button type="submit" className="registerbtn">Register</button>
                 </div>
 
-                <div className="container signin">
+                <div className="container-signin">
                     <p>Already have an account? Use the Login button above! </p>
                 </div>
             </form>
