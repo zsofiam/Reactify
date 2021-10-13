@@ -28,11 +28,9 @@ namespace Reactify.Controllers
         }
 
         [HttpPost("login")]
-        public async Task<StatusCodeResult> Login([FromHeader] User user)
+        public async Task<int> Login([FromHeader] User user)
         {
-            bool isSuccessfull = service.Login(user);
-            if (isSuccessfull) return Ok();
-            return NotFound();
+            return service.Login(user);
         }
 
     }

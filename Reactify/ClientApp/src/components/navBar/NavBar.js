@@ -43,6 +43,7 @@ const NavBar = () => {
     const logOut = () => {
         user.userLoggedOut();
         history.push("/");
+        sessionStorage.clear();
         alert("You are logged in");
 
     }
