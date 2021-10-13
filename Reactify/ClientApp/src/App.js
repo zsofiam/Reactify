@@ -14,7 +14,6 @@ import TrackList from "./components/trackList/TrackList";
 import Login from "./components/authorization/Login";
 import Register from "./components/authorization/Register";
 import { UserProvider } from "./context/user";
-import { Logout } from './components/authorization/Logout';
 
 function App() {
     return (
@@ -47,9 +46,7 @@ function App() {
                     <Route path="/login" exact >
                         <Login />
                     </Route>
-                    <Route path="/logout" exact >
-                        <Logout />
-                    </Route>
+
 
                     <Route path='/support' exact>
                         <Support />
