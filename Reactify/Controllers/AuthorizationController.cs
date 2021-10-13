@@ -18,7 +18,7 @@ namespace Reactify.Controllers
         }
 
         [HttpPost("register")]
-        public async Task<OkResult> RegisterAccount([FromForm] UserModell newUser)
+        public async Task<OkResult> RegisterAccount([FromHeader] UserModell newUser)
         {
 
             User user = new User { Email = newUser.Email, Password = newUser.Password };
