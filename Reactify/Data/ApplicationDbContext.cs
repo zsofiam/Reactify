@@ -6,17 +6,14 @@ using Reactify.Models;
 
 namespace Reactify.Data
 {
-    public class ApplicationDbContext : ApiAuthorizationDbContext<ApplicationUser> // this was ApiAuthorizationDbContext
+    public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext(
-            DbContextOptions options,
-            IOptions<OperationalStoreOptions> operationalStoreOptions) : base(options, operationalStoreOptions)
-        {
-        }
 
-        //protected override void OnModelCreating(ModelBuilder builder)
-        //{
-        //    base.OnModelCreating(builder);
-        //}
+        public DbSet<User> Users { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=ReactifyUsers;Trusted_Connection=True;MultipleActiveResultSets=true");
+        }
     }
 }
