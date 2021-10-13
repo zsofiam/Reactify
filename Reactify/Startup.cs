@@ -29,6 +29,7 @@ namespace Reactify
             services.AddControllersWithViews();
             services.AddSingleton<BandDetailService>();
             services.AddSingleton<IAuthorizationService, AuthorizationService>();
+            services.AddSingleton<ITrackListService, TrackListService>();
             services.AddTransient<JsonFileEventService>();
             services.AddTransient<MusicPlayerService>();
             services.AddTransient<AlbumService>();
