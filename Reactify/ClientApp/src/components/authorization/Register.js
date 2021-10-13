@@ -1,5 +1,8 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './Register.css';
+import { UserContext } from "../../context/user";
+import { useHistory } from 'react-router-dom';
+
 
 
 export const Register = () => {
@@ -8,11 +11,11 @@ export const Register = () => {
     const [email, setEmail] = useState('Email');
     const [password1, setPassword1] = useState('Password2');
     const [password2, setPassword2] = useState('Password1');
+    const history = useHistory();
 
     const emailInputArea = (e) => {
         setEmail(e.target.value);
     }
-
 
     const password1InputArea = (e) => {
         setPassword1(e.target.value);
@@ -22,6 +25,7 @@ export const Register = () => {
         setPassword2(e.target.value);
     }
 
+    const user = useContext(UserContext);
 
 
     const RegistrationReady = (event) => {
@@ -38,12 +42,13 @@ export const Register = () => {
             .request(options)
             .then(function (response) {
 
-                if (response.status === 200) {
+                if (response.data != null) {
                     setIsRegistrationDone(true);
-                    console.log(response);
-                } else {
-                    setIsRegistrationDone(false);
+                    user.userLoggedIn();
+                    sessionStorage.setItem("userId", response.data);
+                    history.push("/");
                 }
+                else { setIsRegistrationDone(false); }
 
             })
             .catch(function (error) {
@@ -54,7 +59,7 @@ export const Register = () => {
     return (
         <div className="registration-container">
 
-            {isRegistrationDone ? <p>Done</p> :
+            {isRegistrationDone ? <p>Registration successful.</p> :
 
                 <form onSubmit={RegistrationReady}>
                     <div>
@@ -76,7 +81,7 @@ export const Register = () => {
 
 
                         <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-                        <button type="submit" className="registerbtn" onClick={() => RegistrationReady()}>Register</button>
+                        <button type="submit" className="registerbtn">Register</button>
                     </div>
 
                     <div className="container-signin">
