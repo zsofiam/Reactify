@@ -23,7 +23,7 @@ namespace Reactify.Controllers
 
             User user = new User { Email = newUser.Email, Password = newUser.Password };
 
-            return service.SaveNewUser(user); ;
+            return service.SaveNewUser(user);
         }
 
         [HttpPost("login")]

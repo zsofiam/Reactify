@@ -29,6 +29,8 @@ export const Register = () => {
 
 
     const RegistrationReady = (event) => {
+        event.preventDefault();
+
         let axios = require("axios").default;
 
         let options = {
