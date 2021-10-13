@@ -25,10 +25,12 @@ namespace Reactify.Services
         }
 
 
-        public void Login(User user)
+        public bool Login(User user)
         {
             var loginUser = _dbContext.Users
                 .Where(x => string.Equals(x.Email, user.Email) && string.Equals(x.Password, user.Password));
+
+            return loginUser != null;
 
         }
     }

@@ -9,6 +9,6 @@ namespace Reactify.Services
     public interface IAuthorizationService
     {
         void SaveNewUser(User newUser);
-        void Login(User user);
+        bool Login(User user);
     }
 }
