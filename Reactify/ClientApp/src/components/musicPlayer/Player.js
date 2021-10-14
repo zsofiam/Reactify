@@ -20,7 +20,9 @@ const Player = (props) => {
     const LikeSong = () => {
         console.log("likeMusic");
         console.log(props.songs[props.currentSongIndex]);
-        
+        if (sessionStorage.getItem("userId") === null || sessionStorage.getItem("userId") === "") {
+            return;
+        }
         if (isLikedSong) setIsLikedSong(false);
         else {
             setIsLikedSong(true);
