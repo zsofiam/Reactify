@@ -19,20 +19,29 @@ namespace Reactify.Controllers
             _trackListService = trackListService;
         }
         [HttpPost]
-        public void SaveTrack([FromBody] Track track)
+        public void SaveTrack([FromBody] TrackWithUserId trackWithUserId)
         {
-            Account retrievedAccount = _trackListService.RetrieveAccountFromDb(1);
+            Account retrievedAccount = _trackListService.RetrieveAccountFromDb(Int32.Parse(trackWithUserId.UserId));
             if (retrievedAccount.Tracks == null)
             {
                 retrievedAccount.Tracks = new List<Track>();
             }
+            Track track = _trackListService.CreateTrackFromData(trackWithUserId);
             _trackListService.SaveTrackToTracklist(retrievedAccount, track);
-            
-
         }
-            
-
         
+        [HttpDelete]
+        public void DeleteTrack([FromBody] TrackWithUserId trackWithUserId)
+        {
+            Account retrievedAccount = _trackListService.RetrieveAccountFromDb(Int32.Parse(trackWithUserId.UserId));
+            Track track = _trackListService.CreateTrackFromData(trackWithUserId);
+            var searchedTrack = retrievedAccount.Tracks.Find(searchedTrack => searchedTrack.Id == track.Id);
+            if (searchedTrack != null)
+            {
+                _trackListService.DeleteTrackFromTracklist(retrievedAccount, track);
+            }
+            
+        }
 
     }
 }
