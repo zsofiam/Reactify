@@ -1,6 +1,8 @@
 ﻿import '../../custom.css';
 import './PlayList.css';
 import MusicPlayer from "../musicPlayer/MusicPlayer";
+import { useHistory } from 'react-router-dom';
+
 
 import React, { useEffect, useState } from "react";
 import axios from "axios";
@@ -11,6 +13,7 @@ const PlayList = () => {
     const [playList, setPlayList] = useState([]);
     const [isLikedSong, setIsLikedSong] = useState(false);
     const [foundUser, setFoundUser] = useState(false);
+    const history = useHistory();
 
     const LikeSong = () => {
         console.log("likeMusic");
@@ -21,10 +24,10 @@ const PlayList = () => {
     };
 
 
-    const playMusic = () => {
+    const playMusic = (event) => {
 
-        console.log("Iam here");
-
+        console.log(event);
+        //    history.push(`/track/${event.id}`);
     }
 
     useEffect(() => {
