@@ -23,7 +23,7 @@ const TrackList = (props) => {
     const history = useHistory();
     const goToPlayer = () => history.push({
         pathname: "/player",
-        state: {detail: albumId}
+        state: {detail: 7049462}    // <--- albumId
     });
 
 

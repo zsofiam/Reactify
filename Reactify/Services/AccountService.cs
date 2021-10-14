@@ -3,7 +3,7 @@ using Reactify.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace Reactify.Services
 {
@@ -18,7 +18,9 @@ namespace Reactify.Services
 
         public List<Track> GetPlayerList(string userId)
         {
-            throw new NotImplementedException();
+            var account = _dbContext.Accounts.Where(acc => acc.Id == Int32.Parse(userId))
+                                             .Include("Tracks").ToList()[0];
+            return account.Tracks;
         }
     }
 }

@@ -10,7 +10,6 @@ namespace Reactify.Models
         public int Id { get; set; }
         public User User { get; set; }
         public List<Track> Tracks { get; set; }
-
-
+        
     }
 }

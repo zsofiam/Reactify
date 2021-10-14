@@ -10,7 +10,6 @@ namespace Reactify.Controllers
 {
     [ApiController]
     [Route("account")]
-
     public class AccountController
     {
         private IAccountService service;
@@ -21,10 +20,9 @@ namespace Reactify.Controllers
         }
 
         [HttpPost("playlist")]
-        public Task<List<Track>> GetPlayListByUserId(string userId)
+        public List<Track> GetPlayListByUserId([FromQuery]string userId)
         {
-            //return service.GetPlayerList(userId);
-            throw new NotImplementedException();
+            return service.GetPlayerList(userId);
         }
     }
 }

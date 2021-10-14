@@ -1,10 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Reactify.Models;
 using Reactify.Services;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Reactify.Controllers
 {
@@ -12,7 +9,7 @@ namespace Reactify.Controllers
     [Route("tracklist")]
     public class TrackListController : ControllerBase
     {
-        public ITrackListService _trackListService { get;}
+        public ITrackListService _trackListService { get; }
 
         public TrackListController(ITrackListService trackListService)
         {
@@ -28,6 +25,7 @@ namespace Reactify.Controllers
             }
             Track track = _trackListService.CreateTrackFromData(trackWithUserId);
             _trackListService.SaveTrackToTracklist(retrievedAccount, track);
+
         }
         
         [HttpDelete]
@@ -42,6 +40,7 @@ namespace Reactify.Controllers
             }
             
         }
+
 
     }
 }

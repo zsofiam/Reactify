@@ -24,7 +24,7 @@ function App() {
                     <Route path="/" exact>
                         <Home />
                     </Route>
-                    <Route path="/playlist" exact>
+                    <Route path="/account/playlist" exact>
                         <Playlist />
                     </Route>
 
