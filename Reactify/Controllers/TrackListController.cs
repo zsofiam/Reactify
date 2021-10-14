@@ -19,13 +19,25 @@ namespace Reactify.Controllers
             _trackListService = trackListService;
         }
         [HttpPost]
-        public void SaveTrack([FromBody] Track track)
+        public void SaveTrack([FromBody] TrackWithUserId trackWithUserId)
         {
-            Account retrievedAccount = _trackListService.RetrieveAccountFromDb(1);
+            Account retrievedAccount = _trackListService.RetrieveAccountFromDb(Int32.Parse(trackWithUserId.UserId));
             if (retrievedAccount.Tracks == null)
             {
                 retrievedAccount.Tracks = new List<Track>();
             }
+            Track track = new Track
+            {
+                Id = trackWithUserId.Id,
+                Title = trackWithUserId.Title,
+                Duration = trackWithUserId.Duration,
+                ReleaseDate = trackWithUserId.ReleaseDate,
+                Preview = trackWithUserId.Preview,
+                Image = trackWithUserId.Image,
+                Artist = trackWithUserId.Artist,
+                ArtistName = trackWithUserId.ArtistName,
+                Album = trackWithUserId.Album
+            };
             _trackListService.SaveTrackToTracklist(retrievedAccount, track);
             
 

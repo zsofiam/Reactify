@@ -2,6 +2,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import PlayerDetails from './PlayerDetails.js';
 import PlayerControls from './PlayerControls';
 import axios from 'axios';
+import { UserContext } from "../../context/user";
 
 const Player = (props) => {
     const audioEl = useRef(null);
@@ -24,9 +25,10 @@ const Player = (props) => {
         else {
             setIsLikedSong(true);
         };
-     
-
+        console.log(sessionStorage.getItem("userId"));
+        
         axios.post("tracklist", {
+            "UserId": sessionStorage.getItem("userId"),
             "Id": props.songs[props.currentSongIndex]["id"],
             "Title": props.songs[props.currentSongIndex]["title"],
             "Duration": props.songs[props.currentSongIndex]["duration"],

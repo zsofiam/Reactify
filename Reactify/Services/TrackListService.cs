@@ -15,9 +15,9 @@ namespace Reactify.Services
         {
             _dbContext = new ApplicationDbContext();
         }
-        public Account RetrieveAccountFromDb(int accountId)
+        public Account RetrieveAccountFromDb(int userId)
         {
-            return _dbContext.Accounts.Where(account => account.Id == accountId).FirstOrDefault();
+            return _dbContext.Accounts.Where(account => account.User.Id == userId).FirstOrDefault();
         }
         public void SaveTrackToTracklist(Account account, Track track)
         {
