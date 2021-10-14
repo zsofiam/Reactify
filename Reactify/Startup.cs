@@ -28,6 +28,7 @@ namespace Reactify
 
             services.AddSingleton<IAccountService, AccountService>();
 
+            services.AddSingleton<ITrackListService, TrackListService>();
             services.AddTransient<JsonFileEventService>();
             services.AddTransient<MusicPlayerService>();
             services.AddTransient<AlbumService>();

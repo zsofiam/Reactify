@@ -1,9 +1,7 @@
 ﻿using Reactify.Data;
 using Reactify.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Reactify.Services
 {
@@ -21,7 +19,7 @@ namespace Reactify.Services
 
             _dbContext.Database.EnsureCreated();
             _dbContext.Add(newUser);
-            _dbContext.Add(new Account { User = newUser, Tracks = new List<Track>() });
+            _dbContext.Add(new Account { User = newUser, Tracks = new List<Track>()});
             _dbContext.SaveChanges();
             return newUser.Id;
         }
