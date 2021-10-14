@@ -37,7 +37,7 @@ const NavBar = () => {
     }
 
     const goToPlaylist = () => {
-        history.push("/playlist");
+        history.push("/account/playlist");
     }
 
     const goToLogin = () => {

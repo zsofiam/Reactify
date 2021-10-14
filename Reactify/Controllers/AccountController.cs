@@ -10,7 +10,6 @@ namespace Reactify.Controllers
 {
     [ApiController]
     [Route("account")]
-
     public class AccountController
     {
         private IAccountService service;
