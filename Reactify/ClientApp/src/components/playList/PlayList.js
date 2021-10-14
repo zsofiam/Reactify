@@ -9,8 +9,8 @@ import axios from "axios";
 const PlayList = () => {
 
     const [playList, setPlayList] = useState([]);
-
     const [isLikedSong, setIsLikedSong] = useState(false);
+    const [foundUser, setFoundUser] = useState(false);
 
     const LikeSong = () => {
         console.log("likeMusic");
@@ -19,13 +19,29 @@ const PlayList = () => {
             setIsLikedSong(true);
         }
     };
-    
+
     useEffect(() => {
+        let axios = require("axios").default;
+
+        let options = {
+            method: 'POST',
+            params: { UserId: sessionStorage.getItem("userId")},
+            url: 'https://localhost:' + window.location.port + '/account/playlist',
+
+        };
+
         axios
-            .get("event")
-            .then((res) =>
-                setPlayList(res.data)
-            );
+            .request(options)
+            .then(function (response) {
+                console.log(response);
+                if (response.data != null) {
+                    setFoundUser(true);
+                    setPlayList(response.data);
+                }
+            })
+            .catch(function (error) {
+                console.error(error);
+            });
     }, []);
 
     return (

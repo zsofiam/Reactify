@@ -2,6 +2,7 @@
 using Reactify.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Reactify.Services
 {
@@ -16,7 +17,10 @@ namespace Reactify.Services
 
         public List<Track> GetPlayerList(string userId)
         {
-            throw new NotImplementedException();
+            var user = _dbContext.Accounts.First(acc => acc.Id == Int32.Parse(userId));
+            var trackZ = user.Tracks;
+            Console.WriteLine("Bob?");
+            return trackZ;
         }
     }
 }
