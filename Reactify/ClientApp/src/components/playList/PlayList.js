@@ -40,7 +40,7 @@ const PlayList = () => {
         axios
             .request(options)
             .then(function (response) {
-                console.log(response.data);
+                console.log("sajt");
                 if (response.data != null) {
                     setFoundUser(true);
                     setPlayList(response.data);
