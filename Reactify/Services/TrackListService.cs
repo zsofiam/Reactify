@@ -28,5 +28,21 @@ namespace Reactify.Services
         {
             throw new NotImplementedException();
         }
+
+        public Track CreateTrackFromData(TrackWithUserId trackWithUserId)
+        {
+            return new Track
+            {
+                Id = trackWithUserId.Id,
+                Title = trackWithUserId.Title,
+                Duration = trackWithUserId.Duration,
+                ReleaseDate = trackWithUserId.ReleaseDate,
+                Preview = trackWithUserId.Preview,
+                Image = trackWithUserId.Image,
+                Artist = trackWithUserId.Artist,
+                ArtistName = trackWithUserId.ArtistName,
+                Album = trackWithUserId.Album
+            };
+        }
     }
 }

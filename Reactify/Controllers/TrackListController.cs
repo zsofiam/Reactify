@@ -26,18 +26,7 @@ namespace Reactify.Controllers
             {
                 retrievedAccount.Tracks = new List<Track>();
             }
-            Track track = new Track
-            {
-                Id = trackWithUserId.Id,
-                Title = trackWithUserId.Title,
-                Duration = trackWithUserId.Duration,
-                ReleaseDate = trackWithUserId.ReleaseDate,
-                Preview = trackWithUserId.Preview,
-                Image = trackWithUserId.Image,
-                Artist = trackWithUserId.Artist,
-                ArtistName = trackWithUserId.ArtistName,
-                Album = trackWithUserId.Album
-            };
+            Track track = _trackListService.CreateTrackFromData(trackWithUserId);
             _trackListService.SaveTrackToTracklist(retrievedAccount, track);
             
 
