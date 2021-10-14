@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Reactify.Services
 {
-    public interface IAuthorizationService
+    public interface IAccountService
     {
-        int SaveNewUser(User newUser);
-        int Login(User user);
+        List<Track> GetPlayerList(string userId);
     }
 }
