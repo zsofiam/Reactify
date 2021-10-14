@@ -20,12 +20,19 @@ const PlayList = () => {
         }
     };
 
+
+    const playMusic = () => {
+
+        console.log("Iam here");
+
+    }
+
     useEffect(() => {
         let axios = require("axios").default;
 
         let options = {
             method: 'POST',
-            params: { UserId: sessionStorage.getItem("userId")},
+            params: { UserId: sessionStorage.getItem("userId") },
             url: 'https://localhost:' + window.location.port + '/account/playlist',
 
         };
@@ -69,19 +76,19 @@ const PlayList = () => {
                 {/*    </div>*/}
                 {/*</div>*/}
 
-                { foundUser ?
+                {foundUser ?
                     <div className="album-tracks">
-                        <p> <span>Title</span><span>Artist / Band</span><span><i className="fas fa-clock"/></span></p>
+                        <p> <span>Title</span><span>Artist / Band</span><span><i className="fas fa-clock" /></span></p>
                         <ol>
                             {playList.map((track, index) => (
-                                <li key={index}><span>{track.title}</span><span>{track.artistName}</span></li>
+                                <li onClick={() => playMusic(track)} key={index}><span>{track.title}</span><span>{track.artistName}</span></li>
                             ))}
                         </ol>
                     </div>
                     :
                     <></>
                 }
-                
+
             </section>
         </>
 
