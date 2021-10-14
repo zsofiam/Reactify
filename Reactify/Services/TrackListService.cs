@@ -1,5 +1,6 @@
 ﻿using Reactify.Data;
 using Reactify.Models;
+using System.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,9 +25,12 @@ namespace Reactify.Services
             account.Tracks.Add(track);
             _dbContext.SaveChanges();
         }
-        public void DeleteTrackFromTracklist(Account account, Track track)
+        public void DeleteTrackFromTracklist(Account account, Track searchedTrack)
         {
-            throw new NotImplementedException();
+            Track trackToRemove = account.Tracks.Find(track => track.Id == searchedTrack.Id);
+            account.Tracks.Remove(trackToRemove);
+            _dbContext.Remove(trackToRemove);
+            _dbContext.SaveChanges();
         }
 
         public Track CreateTrackFromData(TrackWithUserId trackWithUserId)
