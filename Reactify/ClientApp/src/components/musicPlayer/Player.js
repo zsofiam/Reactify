@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import PlayerDetails from './PlayerDetails.js';
 import PlayerControls from './PlayerControls';
 import axios from 'axios';
+import { UserContext } from "../../context/user";
 
 const Player = (props) => {
     const audioEl = useRef(null);
