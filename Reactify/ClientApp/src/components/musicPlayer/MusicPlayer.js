@@ -11,11 +11,11 @@ const MusicPlayer = (detail) => {
     const [nextSongIndex, setNextSongIndex] = useState(currentSongIndex + 1);
     const location = useLocation();
     const [isAlbumReady, setIsAlbumReady] = useState(false);
-
+    
     useEffect(() => {
-        console.log(location.state.detail)
+        // console.log(location.state.detail)
         axios
-            .get(`player?albumId=${location.state.detail}`)
+            .get(`player?albumId=${7049462}`) // location.state.detail
             //.get(`player`)
             .then(
                 res => {
