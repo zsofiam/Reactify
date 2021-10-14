@@ -20,9 +20,10 @@ namespace Reactify.Controllers
         }
 
         [HttpPost("playlist")]
-        public List<Track> GetPlayListByUserId([FromQuery]string userId)
+        public List<Track> GetPlayListByUserId([FromQuery] string userId)
         {
-            return service.GetPlayerList(userId);
+            var c = service.GetPlayerList(userId);
+            return c;
         }
     }
 }
