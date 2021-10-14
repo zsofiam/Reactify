@@ -1,8 +1,7 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import PlayerDetails from './PlayerDetails.js';
 import PlayerControls from './PlayerControls';
 import axios from 'axios';
-import { UserContext } from "../../context/user";
 
 const Player = (props) => {
     const audioEl = useRef(null);
@@ -23,17 +22,17 @@ const Player = (props) => {
         if (sessionStorage.getItem("userId") === null || sessionStorage.getItem("userId") === "") {
             return;
         }
-        const trackAndUserData =  {
+        const trackAndUserData = {
             "UserId": sessionStorage.getItem("userId"),
-                "Id": props.songs[props.currentSongIndex]["id"],
-                    "Title": props.songs[props.currentSongIndex]["title"],
-                        "Duration": props.songs[props.currentSongIndex]["duration"],
-                            "ReleaseDate": props.songs[props.currentSongIndex]["releaseDate"],
-                                "Preview": props.songs[props.currentSongIndex]["preview"],
-                                    "Image": props.songs[props.currentSongIndex]["image"],
-                                        "Artist": props.songs[props.currentSongIndex]["artist"],
-                                            "ArtistName": props.songs[props.currentSongIndex]["artistName"],
-                                                "Album": props.songs[props.currentSongIndex]["album"]
+            "Id": props.songs[props.currentSongIndex]["id"],
+            "Title": props.songs[props.currentSongIndex]["title"],
+            "Duration": props.songs[props.currentSongIndex]["duration"],
+            "ReleaseDate": props.songs[props.currentSongIndex]["releaseDate"],
+            "Preview": props.songs[props.currentSongIndex]["preview"],
+            "Image": props.songs[props.currentSongIndex]["image"],
+            "Artist": props.songs[props.currentSongIndex]["artist"],
+            "ArtistName": props.songs[props.currentSongIndex]["artistName"],
+            "Album": props.songs[props.currentSongIndex]["album"]
         }
 
         if (isLikedSong) {
@@ -80,23 +79,22 @@ const Player = (props) => {
 
     return (
         <div className="c-player">
-            <audio src={props.songs[props.currentSongIndex].preview} ref={audioEl}/>
+            <audio src={props.songs[props.currentSongIndex].preview} ref={audioEl} />
             <h4>Playing now</h4>
-            <PlayerDetails song={props.songs[props.currentSongIndex]}/>
+            <PlayerDetails song={props.songs[props.currentSongIndex]} />
             <div className="heart-icon">
                 <button className="like-btn" onClick={() => LikeSong()}>
                     {isLikedSong ? <i class="fas fa-heart"></i> : <i class="far fa-heart"></i>}
                 </button>
             </div>
             <PlayerControls isPlaying={isPlaying}
-                            setIsPlaying={setIsPlaying}
-                            SkipSong={SkipSong}/>
+                setIsPlaying={setIsPlaying}
+                SkipSong={SkipSong} />
             <p><strong>Next up:</strong>
                 {props.songs[props.nextSongIndex].title}
             </p>
         </div>
     );
-
 }
 
 export default Player;

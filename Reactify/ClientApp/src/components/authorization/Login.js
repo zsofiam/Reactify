@@ -32,7 +32,6 @@ export const Login = () => {
         axios
             .request(options)
             .then(function (response) {
-                console.log(response);
                 if (response.data != null) {
                     user.userLoggedIn();
                     setIsLoginSuccessfull(true);
