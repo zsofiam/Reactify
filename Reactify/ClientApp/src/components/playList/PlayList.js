@@ -36,11 +36,11 @@ const PlayList = () => {
             </div>
             <section data-testid="playlist">
                 <div className="album-info">
-                    <div className="album-art"><img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80" />
+                    <div className="album-art"><img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80"  alt="album cover"/>
                         <div className="actions">
                             <div className="play">Play</div>
                             <div className="bookmark" onClick={() => LikeSong()}>
-                                {isLikedSong ? <i className="fas fa-heart"></i> : <i className="far fa-heart"></i>}
+                                {isLikedSong ? <i className="fas fa-heart"/> : <i className="far fa-heart"/>}
                             </div>
                         </div>
                     </div>
@@ -53,7 +53,7 @@ const PlayList = () => {
                     </div>
                 </div>
                 <div className="album-tracks">
-                    <p> <span>Title</span><span>Artist / Band</span><span><i className="fas fa-clock"></i></span></p>
+                    <p> <span>Title</span><span>Artist / Band</span><span><i className="fas fa-clock"/></span></p>
                     <ol>
                         <li> <span>Feel Invincible</span><span>Skillet</span><span>3:49</span></li>
                         <li> <span>Back From The Dead</span><span>3:33</span></li>
