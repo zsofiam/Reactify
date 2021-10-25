@@ -11,9 +11,9 @@ namespace Reactify.Services
     {
         private ApplicationDbContext _dbContext;
 
-        public AccountService()
+        public AccountService(ApplicationDbContext dbContext)
         {
-            _dbContext = new ApplicationDbContext();
+            _dbContext = dbContext;
         }
 
         public List<Track> GetPlayerList(string userId)
