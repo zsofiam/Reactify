@@ -12,5 +12,6 @@
         public string ArtistName { get; set; }
         public Album Album { get; set; }
         //public Account Account { get; set; }
+
     }
 }
