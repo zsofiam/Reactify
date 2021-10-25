@@ -13,11 +13,14 @@ const MusicPlayer = (detail) => {
     const [isAlbumReady, setIsAlbumReady] = useState(false);
 
     useEffect(() => {
-        // console.log(location.state.detail)
+        let axiosConfigString;
+        if (location.state != null) {
+            axiosConfigString = `player?albumId=${location.state.detail}`;
+        } else {
+            axiosConfigString = "/account/playlist";
+        }
         axios
-            .get(`player?albumId=${7049462}`) // location.state.detail
-            //.get(`player`)
-            //7049462
+            .get(axiosConfigString)
             .then(
                 res => {
                     setSongs(res.data);
