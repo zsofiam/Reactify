@@ -13,18 +13,28 @@ const MusicPlayer = (detail) => {
     const [isAlbumReady, setIsAlbumReady] = useState(false);
 
     useEffect(() => {
-        let axiosConfigString;
+        let options;
         if (location.state != null) {
-            axiosConfigString = `player?albumId=${location.state.detail}`;
+            options = {
+                method: 'GET',
+                url: `player?albumId=${location.state.detail}`,
+
+            };
         } else {
-            axiosConfigString = "/account/playlist";
+            options = {
+                method: 'POST',
+                params: { UserId: sessionStorage.getItem("userId") },
+                url: 'https://localhost:' + window.location.port + '/account/playlist',
+
+            };
         }
         axios
-            .get(axiosConfigString)
+            .request(options)
             .then(
                 res => {
                     setSongs(res.data);
                     setIsAlbumReady(true);
+                    console.log("isalbumready");
                 })
     }, []);
 

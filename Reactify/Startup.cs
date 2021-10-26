@@ -23,12 +23,12 @@ namespace Reactify
 
             services.AddDatabaseDeveloperPageExceptionFilter();
             services.AddControllersWithViews();
-            services.AddSingleton<BandDetailService>();
-            services.AddSingleton<IAuthorizationService, AuthorizationService>();
+            services.AddTransient<BandDetailService>();
+            services.AddTransient<IAuthorizationService, AuthorizationService>();
 
-            services.AddSingleton<IAccountService, AccountService>();
+            services.AddTransient<IAccountService, AccountService>();
 
-            services.AddSingleton<ITrackListService, TrackListService>();
+            services.AddTransient<ITrackListService, TrackListService>();
             services.AddTransient<JsonFileEventService>();
             services.AddTransient<MusicPlayerService>();
             services.AddTransient<AlbumService>();
