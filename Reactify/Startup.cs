@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Reactify.Data;
 using Reactify.Services;
 
 namespace Reactify
@@ -23,18 +25,20 @@ namespace Reactify
 
             services.AddDatabaseDeveloperPageExceptionFilter();
             services.AddControllersWithViews();
-            services.AddTransient<BandDetailService>();
-            services.AddTransient<IAuthorizationService, AuthorizationService>();
+            services.AddSingleton<BandDetailService>();
+            services.AddScoped<IAuthorizationService, AuthorizationService>();
 
-            services.AddTransient<IAccountService, AccountService>();
+            services.AddScoped<IAccountService, AccountService>();
 
-            services.AddTransient<ITrackListService, TrackListService>();
+            services.AddScoped<ITrackListService, TrackListService>();
             services.AddTransient<JsonFileEventService>();
             services.AddTransient<MusicPlayerService>();
             services.AddTransient<AlbumService>();
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration => { configuration.RootPath = "ClientApp/build"; });
+
+            services.AddDbContext<ApplicationDbContext>(o => o.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -9,9 +9,9 @@ namespace Reactify.Services
     {
         private ApplicationDbContext _dbContext;
 
-        public AuthorizationService()
+        public AuthorizationService(ApplicationDbContext dbContext)
         {
-            _dbContext = new ApplicationDbContext();
+            _dbContext = dbContext;
         }
 
         public int SaveNewUser(User newUser)

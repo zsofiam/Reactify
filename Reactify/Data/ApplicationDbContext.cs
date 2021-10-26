@@ -8,11 +8,20 @@ namespace Reactify.Data
 
         public DbSet<User> Users { get; set; }
         public DbSet<Account> Accounts { get; set; }
-        
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=ReactifyUsers;Trusted_Connection=True;MultipleActiveResultSets=true");
+        //}
+
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> dbContextOptions) :base(dbContextOptions)
         {
-            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=ReactifyUsers;Trusted_Connection=True;MultipleActiveResultSets=true");
+
+        }
+        public ApplicationDbContext()
+        {
+
         }
     }
 }

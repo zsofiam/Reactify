@@ -82,11 +82,13 @@ const Player = (props) => {
             <audio src={props.songs[props.currentSongIndex].preview} ref={audioEl} />
             <h4>Playing now</h4>
             <PlayerDetails song={props.songs[props.currentSongIndex]} />
+            {sessionStorage.getItem("userId")?
             <div className="heart-icon">
                 <button className="like-btn" onClick={() => LikeSong()}>
                     {isLikedSong ? <i class="fas fa-heart"></i> : <i class="far fa-heart"></i>}
                 </button>
-            </div>
+                </div> :
+                ''}
             <PlayerControls isPlaying={isPlaying}
                 setIsPlaying={setIsPlaying}
                 SkipSong={SkipSong} />

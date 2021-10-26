@@ -12,9 +12,9 @@ namespace Reactify.Services
     {
         public ApplicationDbContext _dbContext;
 
-        public TrackListService()
+        public TrackListService(ApplicationDbContext dbContext)
         {
-            _dbContext = new ApplicationDbContext();
+            _dbContext = dbContext;
         }
         public Account RetrieveAccountFromDb(int userId)
         {
