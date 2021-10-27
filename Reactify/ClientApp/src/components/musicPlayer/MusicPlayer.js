@@ -34,7 +34,7 @@ const MusicPlayer = (detail) => {
                 return currentSongIndex + 1;
             }
         })
-    }, [currentSongIndex]);
+    }, [currentSongIndex, songs.length]);
 
     return (
         <div className="MusicPlayer" data-testid="music-player">

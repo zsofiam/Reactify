@@ -36,6 +36,7 @@ const TrackList = (props) => {
                     {songs.map(song => (
 
                         <li className="num"
+                            key={song.id}
                             onClick={goToPlayer}
                             name={song.album.id}
                             onMouseOver={(e) => {
