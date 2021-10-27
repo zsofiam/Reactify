@@ -2,28 +2,41 @@ import axios from "axios";
 import React, { useEffect, useState } from 'react';
 import './MusicPlayer.css';
 import Player from './Player.js';
-// import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const MusicPlayer = (detail) => {
     const [songs, setSongs] = useState({});
 
     const [currentSongIndex, setCurrentSongIndex] = useState(0);
     const [nextSongIndex, setNextSongIndex] = useState(currentSongIndex + 1);
-    // const location = useLocation();
+    const location = useLocation();
     const [isAlbumReady, setIsAlbumReady] = useState(false);
 
     useEffect(() => {
-        // console.log(location.state.detail)
+        let options;
+        if (location.state != null) {
+            options = {
+                method: 'GET',
+                url: `player?albumId=${location.state.detail}`,
+
+            };
+        } else {
+            options = {
+                method: 'POST',
+                params: { UserId: sessionStorage.getItem("userId") },
+                url: 'https://localhost:' + window.location.port + '/account/playlist',
+
+            };
+        }
         axios
-            .get(`player?albumId=${7049462}`) // location.state.detail
-            //.get(`player`)
-            //7049462
+            .request(options)
             .then(
                 res => {
                     setSongs(res.data);
                     setIsAlbumReady(true);
+                    console.log("isalbumready");
                 })
-    }, []);
+    }, [location.state]);
 
 
     useEffect(() => {
