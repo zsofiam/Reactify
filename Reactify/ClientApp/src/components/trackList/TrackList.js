@@ -7,7 +7,7 @@ const TrackList = (props) => {
     const [songs, setSongs] = useState();
     const [isResultAvailable, setResultAvailable] = useState(false);
     const [albumId, setAlbumId] = useState("");
-
+    console.log("albumid:", albumId);
 
     useEffect(() => {
         axios
@@ -35,6 +35,7 @@ const TrackList = (props) => {
                     {songs.map(song => (
 
                         <li className="num"
+                            key={song.id}
                             onClick={goToPlayer}
                             name={song.album.id}
                             onMouseOver={(e) => {
