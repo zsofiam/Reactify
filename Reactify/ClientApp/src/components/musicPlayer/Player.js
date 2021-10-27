@@ -85,7 +85,7 @@ const Player = (props) => {
             {sessionStorage.getItem("userId")?
             <div className="heart-icon">
                 <button className="like-btn" onClick={() => LikeSong()}>
-                    {isLikedSong ? <i class="fas fa-heart"></i> : <i class="far fa-heart"></i>}
+                        {isLikedSong ? <i className="fas fa-heart"></i> : <i className="far fa-heart"></i>}
                 </button>
                 </div> :
                 ''}

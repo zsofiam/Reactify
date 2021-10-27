@@ -12,44 +12,44 @@ const Support = () => {
                     <div id="left-col">
                         <div id="left-col-cont">
                             <h2>Developers</h2>
-                            <div class="item">
-                                <div class="img-col">
+                            <div className="item">
+                                <div className="img-col">
                                     <img
                                         src="https://media-exp1.licdn.com/dms/image/C4E03AQHXUTJfb2wjtA/profile-displayphoto-shrink_800_800/0/1632227417445?e=1638403200&v=beta&t=CtnZ4_qt1iS8xaA0TxRKj-qPwkzGOXbmQhHLzNfMKxQ"
                                         alt=""/>
                                 </div>
-                                <div class="meta-col">
+                                <div className="meta-col">
                                     <h3>Csilla Hegedus</h3>
                                 </div>
                             </div>
-                            <div class="item">
-                                <div class="img-col">
+                            <div className="item">
+                                <div className="img-col">
                                     <img
                                         src="https://media-exp1.licdn.com/dms/image/C4D03AQE_aySuEYSCNQ/profile-displayphoto-shrink_800_800/0/1517452446867?e=1638403200&v=beta&t=JMvn6eX4-PmBWjk5VLzfGcdUkS40t2W7gHTrJUd9t6Y"
                                         alt=""/>
                                 </div>
-                                <div class="meta-col">
+                                <div className="meta-col">
                                     <h3>Zsofia Matyasi</h3>
 
                                 </div>
                             </div>
-                            <div class="item">
-                                <div class="img-col">
+                            <div className="item">
+                                <div className="img-col">
                                     <img
                                         src="https://media-exp1.licdn.com/dms/image/C5603AQHrKAAmyBO0xg/profile-displayphoto-shrink_800_800/0/1629454469695?e=1638403200&v=beta&t=sD_YfR88xbkG0vVcm0wuy2pQCQUhEmoqKtgSGQT0prc"
                                         alt=""/>
                                 </div>
-                                <div class="meta-col">
+                                <div className="meta-col">
                                     <h3>Ferenc Jancsar</h3>
                                 </div>
                             </div>
-                            <div class="item">
-                                <div class="img-col">
+                            <div className="item">
+                                <div className="img-col">
                                     <img
                                         src="https://media-exp1.licdn.com/dms/image/C4D03AQEnA0YNEY2ZIw/profile-displayphoto-shrink_800_800/0/1626854811418?e=1638403200&v=beta&t=rr7hJVHjH0w5sxNjrhGIizjxT_jl6q_o4yxo5uiP0PM"
                                         alt=""/>
                                 </div>
-                                <div class="meta-col">
+                                <div className="meta-col">
                                     <h3>Monika Bohm</h3>
                                 </div>
                             </div>
@@ -109,14 +109,14 @@ const Support = () => {
                                 </select>
                             </div>
 
-                            <div class="right">
-                                <label id="cvc-label" for="">CVC <i class="fa fa-question-circle-o"
+                            <div className="right">
+                                <label id="cvc-label" for="">CVC <i className="fa fa-question-circle-o"
                                                                     aria-hidden="true"></i></label>
                                 <input id="cvc" type="text" placeholder="123" maxlength="3"/>
                             </div>
                             <button id="purchase">Support Reactify</button>
-                            <button id="paypal"><i class="fa fa-paypal" aria-hidden="true"></i> Pay with PayPal</button>
-                            <p id="support">Having problem with checkout? <a href="#">Contact our support</a>.</p>
+                            <button id="paypal"><i className="fa fa-paypal" aria-hidden="true"></i> Pay with PayPal</button>
+                            <p id="support">Having problem with checkout? <a href="/#">Contact our support</a>.</p>
                         </form>
                     </div>
                 </div>

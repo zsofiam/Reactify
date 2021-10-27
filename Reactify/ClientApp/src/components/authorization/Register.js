@@ -82,7 +82,7 @@ export const Register = () => {
                             required value={password2} onChange={password2InputArea} />
 
 
-                        <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+                        <p>By creating an account you agree to our <a href="/#">Terms & Privacy</a>.</p>
                         <button type="submit" className="registerbtn">Register</button>
                     </div>
 

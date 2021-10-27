@@ -2,14 +2,14 @@ import axios from "axios";
 import React, { useEffect, useState } from 'react';
 import './MusicPlayer.css';
 import Player from './Player.js';
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 
 const MusicPlayer = (detail) => {
     const [songs, setSongs] = useState({});
 
     const [currentSongIndex, setCurrentSongIndex] = useState(0);
     const [nextSongIndex, setNextSongIndex] = useState(currentSongIndex + 1);
-    const location = useLocation();
+    // const location = useLocation();
     const [isAlbumReady, setIsAlbumReady] = useState(false);
 
     useEffect(() => {
@@ -34,7 +34,7 @@ const MusicPlayer = (detail) => {
                 return currentSongIndex + 1;
             }
         })
-    }, [currentSongIndex]);
+    }, [currentSongIndex, songs.length]);
 
     return (
         <div className="MusicPlayer" data-testid="music-player">
