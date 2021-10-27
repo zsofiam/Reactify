@@ -57,7 +57,7 @@ const NavBar = () => {
             <div className="topnav" id="myTopnav">
                 <a href="/" className="icon-spotify"><img src="./images/Reactify.png" alt="Reactify logo" /></a>
 
-                <a href="javascript:void(0);" className="search-button" onClick={goToSearchBand}>Search Artists</a>
+                <button className="search-button" onClick={goToSearchBand}>Search Artists</button>
 
                 <div className="search-container">
                     <input name="track"
@@ -69,25 +69,25 @@ const NavBar = () => {
                     <button onClick={goToTracklist}><i className="fa fa-search" /></button>
                 </div>
 
-                <a href="javascript:void(0);" className="search-button" onClick={goToSearchEvent}>Search Events</a>
+                <button className="search-button" onClick={goToSearchEvent}>Search Events</button>
                 {user.isLogged ?
                     <>
-                        <a href="javascript:void(0);" className="search-button" onClick={goToPlaylist}>PlayList</a>
-                        <a href="javascript:void(0);" className="search-button" onClick={logOut}>Logout</a>
+                        <button className="search-button" onClick={goToPlaylist}>PlayList</button>
+                        <button className="search-button" onClick={logOut}>Logout</button>
                     </>
                     :
                     <>
-                        <a href="javascript:void(0);" className="search-button" onClick={goToLogin}>Login</a>
-                        <a href="javascript:void(0);" className="search-button" onClick={goToRegister}>Register</a>
+                        <button className="search-button" onClick={goToLogin}>Login</button>
+                        <button className="search-button" onClick={goToRegister}>Register</button>
                     </>
 
                 }
 
 
 
-                <a href="javascript:void(0);" className="icon" onClick={mobileMenu}>
+                <button className="icon" onClick={mobileMenu}>
                     <i className="fa fa-bars" />
-                </a>
+                </button>
             </div>
         </>
     );
