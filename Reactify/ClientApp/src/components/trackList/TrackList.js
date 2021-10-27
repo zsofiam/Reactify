@@ -7,7 +7,7 @@ const TrackList = (props) => {
     const [songs, setSongs] = useState();
     const [isResultAvailable, setResultAvailable] = useState(false);
     const [albumId, setAlbumId] = useState("");
-
+    console.log("albumid:", albumId);
 
     useEffect(() => {
         axios
