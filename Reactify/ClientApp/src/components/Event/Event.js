@@ -4,7 +4,7 @@ const Event = (props) => {
 
     const {id, img, band, genre, date, venue, url} = props.event;
     return (
-        <li class="card">
+        <li className="card">
             <img src={img} alt="event"/>
             <button className="events-button"><span><a target="_blank" href={url}> <i className="fas fa-credit-card"/> Buy ticket</a> </span>
             </button>

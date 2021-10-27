@@ -15,7 +15,7 @@ const Footer = () => {
                                 target='_blank'
                                 aria-label='Instagram'
                                 rel="noreferrer"
-                            > <i class="fas fa-headset"></i>
+                            > <i className="fas fa-headset"></i>
 
                             </a>
                         </ul>
