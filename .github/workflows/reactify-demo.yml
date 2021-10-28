@@ -1,10 +1,10 @@
-name: Build and deploy .NET Core application to Web App codecool-reactify
+name: Build and deploy .NET Core application to Web App reactify-demo
 on:
   push:
     branches:
     - development
 env:
-  AZURE_WEBAPP_NAME: codecool-reactify
+  AZURE_WEBAPP_NAME: reactify-demo
   AZURE_WEBAPP_PACKAGE_PATH: Reactify\published
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 5.0.x
@@ -30,7 +30,7 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         app-name: ${{ env.AZURE_WEBAPP_NAME }}
-        publish-profile: ${{ secrets.CODECOOL_REACTIFY_FFFF }}
+        publish-profile: ${{ secrets.REACTIFY_DEMO_FFFF }}
         package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
     - name: Publish Artifacts
       uses: actions/upload-artifact@v1.0.0
