@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace Reactify.Services
 {
@@ -18,7 +19,8 @@ namespace Reactify.Services
         }
         public Account RetrieveAccountFromDb(int userId)
         {
-            return _dbContext.Accounts.Where(account => account.User.Id == userId).FirstOrDefault();
+            return _dbContext.Accounts.Where(acc => acc.User.Id == userId)
+                                                .Include("Tracks").ToList()[0];
         }
         public void SaveTrackToTracklist(Account account, Track track)
         {
