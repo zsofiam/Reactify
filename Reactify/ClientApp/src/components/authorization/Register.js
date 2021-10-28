@@ -36,10 +36,10 @@ export const Register = () => {
         let options = {
             method: 'POST',
             params: { Email: email, Password: password1, Password2: password2 },
-            url: 'https://localhost:' + window.location.port + '/authorization/register',
+            url: '/authorization/register',
 
         };
-
+        // url: 'https://localhost:' + window.location.port + '/authorization/register',
         axios
             .request(options)
             .then(function (response) {

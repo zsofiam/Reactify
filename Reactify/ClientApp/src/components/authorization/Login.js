@@ -25,10 +25,10 @@ export const Login = () => {
         let options = {
             method: 'POST',
             params: { Email: email, Password: password },
-            url: 'https://localhost:' + window.location.port + '/authorization/login',
+            url: '/authorization/login',
 
         };
-
+        // url: 'https://localhost:' + window.location.port + '/authorization/login',
         axios
             .request(options)
             .then(function (response) {

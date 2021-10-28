@@ -24,10 +24,11 @@ const MusicPlayer = (detail) => {
             options = {
                 method: 'POST',
                 params: { UserId: sessionStorage.getItem("userId") },
-                url: 'https://localhost:' + window.location.port + '/account/playlist',
+                url: '/account/playlist',
 
             };
         }
+        // url: 'https://localhost:' + window.location.port + '/account/playlist',
         axios
             .request(options)
             .then(
