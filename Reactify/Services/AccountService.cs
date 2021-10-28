@@ -19,7 +19,7 @@ namespace Reactify.Services
         public List<Track> GetPlayerList(string userId)
         {
             var account = _dbContext.Accounts.Where(acc => acc.User.Id == Int32.Parse(userId))
-                                             .Include("Tracks").ToList()[0];
+                                             .Include("Track").ToList()[0];
             return account.Tracks;
         }
     }
